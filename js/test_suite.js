@@ -121,7 +121,7 @@ expectedRoutes.forEach(route => {
     mukallaFoundCount++;
   }
   // Check for other cities that were supposed to be excluded
-  const unwanted = content.match(/سيئون|تريم|الشحر/g);
+  const unwanted = content.match(/سيئون|تريم|الشحر|غيل باوزير|(?:\s|^)عدن(?:\s|[،\.]|$)/g);
   if (unwanted) {
     unwantedCitiesCount += unwanted.length;
   }

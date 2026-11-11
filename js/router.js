@@ -152,6 +152,19 @@ class WaslRouter {
     const viewData = this.routes[routeId];
     this.container.innerHTML = viewData.html;
 
+    // Execute scripts contained in the loaded view
+    try {
+      const scripts = Array.from(this.container.querySelectorAll('script'));
+      scripts.forEach(oldScript => {
+        const newScript = document.createElement('script');
+        Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
+        newScript.textContent = oldScript.textContent;
+        oldScript.parentNode.replaceChild(newScript, oldScript);
+      });
+    } catch (scriptErr) {
+      console.warn('[WaslRouter] Inline script execution notice:', scriptErr);
+    }
+
     // 4. Update Document Title
     document.title = viewData.title || 'منصة وصل التعليمية - المكلا';
 
