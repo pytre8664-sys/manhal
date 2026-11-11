@@ -1,7 +1,7 @@
 /**
  * ============================================================================
  * منصة وصل التعليمية — السلوكيات التفاعلية وإدارة الحالة (Wasl Interactions)
- * متوافقة 100% مع معايير DOM القياسية وخالية من أي أخطاء أو استثناءات DOMException
+ * متوافقة 100% مع معايير DOM القياسية ومنطقية التدفقات لسير العمل الفعلي
  * ============================================================================
  */
 
@@ -58,7 +58,7 @@ class WaslInteractions {
         if (roleEl) roleEl.textContent = 'معلمة كيمياء وأحياء (بديل عاجل) - المكلا';
       } else {
         if (nameEl) nameEl.textContent = 'أ. عمر سالم باوزير';
-        if (roleEl) roleEl.textContent = 'معلم أول رياضيات وفيزياء - المرحلة الثانوية';
+        if (roleEl) roleEl.textContent = 'معلم أول رياضيات وفيزياء - المرحلة الثانوية بالمكلا';
       }
 
       overlay.classList.remove('hidden');
@@ -245,7 +245,7 @@ class WaslInteractions {
       switch (routeId) {
         case 'home':
         case 'home-alt':
-          this.initHomeFAQ();
+          this.initHomeInteractions();
           break;
         case 'find-teachers':
           this.initTeacherSearchFilters();
@@ -281,9 +281,9 @@ class WaslInteractions {
   }
 
   /**
-   * 0. الأسئلة الشائعة في الرئيسية: التبديل الانسيابي للأكورديون
+   * 0. الرئيسية: الأكورديون وروابط البحث السريع
    */
-  initHomeFAQ() {
+  initHomeInteractions() {
     const faqButtons = document.querySelectorAll('.faq-toggle');
     faqButtons.forEach(button => {
       button.addEventListener('click', () => {
@@ -314,7 +314,7 @@ class WaslInteractions {
   }
 
   /**
-   * 1. استكشاف المعلمين: البحث الفوري وفلترة أحياء المكلا
+   * 1. استكشاف المعلمين: البحث الفوري وفلترة أحياء المكلا بدقة منطقية
    */
   initTeacherSearchFilters() {
     const searchInput = document.querySelector('input[type="search"], input[placeholder*="ابحث"], input[placeholder*="رياضيات"]');
@@ -322,6 +322,7 @@ class WaslInteractions {
     const subjectSelect = document.getElementById('filter-subject');
     const gradeSelect = document.getElementById('filter-grade');
     const districtSelect = document.getElementById('filter-district');
+    const matchCounter = this.findEl('span', 'معلماً متطابقاً') || document.querySelector('.font-headline-sm');
 
     const filterTeachers = () => {
       const query = searchInput ? searchInput.value.trim().toLowerCase() : '';
@@ -355,14 +356,26 @@ class WaslInteractions {
         }
       });
 
+      // Update counter UI cleanly if counter element exists
+      const counterEl = this.findEl('span', 'معلماً متطابقاً');
+      if (counterEl) {
+        counterEl.textContent = `${matchCount} معلماً متطابقاً`;
+      }
+
       return matchCount;
     };
 
     if (searchInput) {
       searchInput.addEventListener('input', () => {
-        const count = filterTeachers();
-        if (searchInput.value.trim().length === 3 && window.router) {
-          window.router.showToast(`تم العثور على ${count} معلم مطابق في مدينة المكلا`, 'info');
+        filterTeachers();
+      });
+      searchInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          const count = filterTeachers();
+          if (window.router) {
+            window.router.showToast(`تم فرز النتائج: العثور على ${count} معلم مطابق بالمكلا`, 'info');
+          }
         }
       });
     }
@@ -464,9 +477,9 @@ class WaslInteractions {
           contactBox.innerHTML = `
             <div class="flex items-center gap-2">
               <span class="material-symbols-outlined text-status-verified text-[18px]">verified</span>
-              <span>بيانات الاتصال بولي الأمر: <strong>777-123456</strong> (المكلا - الديس)</span>
+              <span>بيانات الاتصال بولي الأمر المعتمد: <strong>+967 770 123 456</strong> (المكلا - الديس)</span>
             </div>
-            <a href="https://wa.me/967777123456" target="_blank" class="px-2.5 py-1 rounded-md bg-emerald-600 text-white font-bold hover:bg-emerald-700">محادثة واتساب</a>
+            <a href="https://wa.me/967770123456" target="_blank" class="px-2.5 py-1 rounded-md bg-emerald-600 text-white font-bold hover:bg-emerald-700">محادثة واتساب</a>
           `;
           parentCard.appendChild(contactBox);
           btn.style.display = 'none';
@@ -504,7 +517,7 @@ class WaslInteractions {
           });
           pill.className = 'inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md transition-colors shadow-sm';
           if (window.router) {
-            const childName = pill.textContent.includes('سالم') ? 'سالم' : 'فاطمة';
+            const childName = pill.textContent.includes('سالم') ? 'سالم (ثانوية عامة)' : 'فاطمة (الصف التاسع)';
             window.router.showToast(`تم عرض التوصيات والمعلمين المطابقين للطالب: ${childName}`, 'info');
           }
         });
@@ -513,30 +526,56 @@ class WaslInteractions {
   }
 
   /**
-   * 5. الملف المهني للمعلم: الحفظ والمشاركة
+   * 5. الملف المهني للمعلم: الحفظ، المشاركة، وطلب التواصل
    */
   initTeacherProfile() {
+    const teacherName = document.querySelector('h1')?.textContent.trim() || 'أ. عمر سالم باوزير';
+
+    // حفظ في المفضلة
     const saveBtn = this.findEl('button', 'حفظ');
     if (saveBtn) {
       saveBtn.addEventListener('click', () => {
         const isSaved = saveBtn.getAttribute('data-saved') === 'true';
         if (isSaved) {
           saveBtn.setAttribute('data-saved', 'false');
-          if (window.router) window.router.showToast('تمت إزالة المعلم من قائمتك المفضلة', 'info');
+          if (window.router) window.router.showToast(`تمت إزالة ${teacherName} من قائمتك المفضلة`, 'info');
         } else {
           saveBtn.setAttribute('data-saved', 'true');
-          if (window.router) window.router.showToast('تم حفظ أ. عمر باوزير في قائمة المعلمين المفضلة بالمكلا ❤️', 'success');
+          if (window.router) window.router.showToast(`تم حفظ ${teacherName} في قائمة المعلمين المفضلة بالمكلا ❤️`, 'success');
         }
       });
     }
 
-    const shareBtn = this.findEl('button', 'مشاركة');
-    if (shareBtn) {
-      shareBtn.addEventListener('click', () => {
+    // مشاركة ونسخ الرابط
+    const shareBtns = this.findEls('button', 'مشاركة').concat(this.findEls('button', 'نسخ الرابط'));
+    shareBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
         if (navigator.clipboard) {
           navigator.clipboard.writeText(window.location.href);
         }
-        if (window.router) window.router.showToast('تم نسخ رابط الملف المهني للمعلم لمشاركته بسهولة! 📋', 'success');
+        if (window.router) window.router.showToast(`تم نسخ رابط الملف المهني لـ ${teacherName} بنجاح! 📋`, 'success');
+      });
+    });
+
+    // السيرة PDF
+    const pdfBtn = this.findEl('button', 'السيرة PDF');
+    if (pdfBtn) {
+      pdfBtn.addEventListener('click', () => {
+        window.print();
+      });
+    }
+
+    // طرح استفسار: تمرير ناعم لنموذج التواصل
+    const inquiryBtn = this.findEl('a', 'طرح استفسار') || this.findEl('button', 'طرح استفسار');
+    if (inquiryBtn) {
+      inquiryBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const section = document.getElementById('booking-section');
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+          const textarea = section.querySelector('textarea');
+          if (textarea) textarea.focus();
+        }
       });
     }
   }
@@ -570,7 +609,7 @@ class WaslInteractions {
         broadcastBtn.disabled = true;
         broadcastBtn.innerHTML = `
           <span class="material-symbols-outlined text-xl animate-spin">progress_activity</span>
-          <span>جارٍ إرسال النداء وتنبيه 14 معلماً في المكلا...</span>
+          <span>جارٍ إرسال النداء وتنبيه الكوادر المتاحة في المكلا...</span>
         `;
         setTimeout(() => {
           broadcastBtn.innerHTML = `
@@ -581,7 +620,7 @@ class WaslInteractions {
           broadcastBtn.classList.add('bg-status-verified');
 
           if (window.router) {
-            window.router.showToast('تم تعميم الاحتياج العاجل بنجاح على 14 معلماً مطابقاً في أحياء المكلا!', 'success');
+            window.router.showToast('تم تعميم الاحتياج العاجل بنجاح على المعلمين المطابقين في أحياء المكلا!', 'success');
             setTimeout(() => {
               window.router.navigate('school-dashboard');
             }, 1200);
@@ -600,7 +639,7 @@ class WaslInteractions {
     const display = document.getElementById('quotaDisplay');
     if (slider && display) {
       slider.addEventListener('input', (e) => {
-        display.textContent = e.target.value + ' حصة';
+        display.textContent = e.target.value + ' حصة أسبوعياً';
       });
     }
 
@@ -658,7 +697,7 @@ class WaslInteractions {
         publishBtn.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">refresh</span><span>جارٍ نشر الوظيفة في شبكة المكلا...</span>';
         publishBtn.classList.add('opacity-90', 'pointer-events-none');
         setTimeout(() => {
-          publishBtn.innerHTML = '<span class="material-symbols-outlined text-[20px]">check_circle</span><span>تم النشر بنجاح وإشعار 28 معلماً! 🎉</span>';
+          publishBtn.innerHTML = '<span class="material-symbols-outlined text-[20px]">check_circle</span><span>تم النشر بنجاح وإشعار المعلمين المتطابقين! 🎉</span>';
           publishBtn.classList.remove('bg-primary');
           publishBtn.classList.add('bg-status-verified');
           if (window.router) {
@@ -673,7 +712,7 @@ class WaslInteractions {
   }
 
   /**
-   * 8. مصفوفة التقييم المفاضل للمتقدمين: احتساب المعدل الفوري وفلاتر المعايير
+   * 8. مصفوفة التقييم المفاضل للمتقدمين: احتساب المعدل الفعلي وفلاتر المعايير وإجراءات التعيين
    */
   initApplicantEvalMatrix() {
     const diffToggle = document.getElementById('highlightDifferencesToggle');
@@ -732,23 +771,84 @@ class WaslInteractions {
       });
     });
 
+    // Realistic score calculation based on candidate evaluation matrix criteria
     const scoreInputs = document.querySelectorAll('input[type="range"], input[type="number"], select');
     const totalScoreDisplay = document.querySelector('.font-display-hero, .text-3xl');
 
-    scoreInputs.forEach(input => {
-      input.addEventListener('input', () => {
-        const randomScore = Math.floor(88 + Math.random() * 10);
-        if (totalScoreDisplay) {
-          totalScoreDisplay.textContent = `${randomScore} / 100`;
+    const updateScore = () => {
+      let sum = 0;
+      let count = 0;
+      scoreInputs.forEach(input => {
+        const val = parseFloat(input.value);
+        if (!isNaN(val)) {
+          sum += val;
+          count++;
         }
       });
+      // Benchmark candidate score defaults to 96% based on committee card
+      const finalScore = count > 0 ? Math.round(sum / count) : 96;
+      if (totalScoreDisplay) {
+        totalScoreDisplay.textContent = `${finalScore}%`;
+      }
+    };
+
+    scoreInputs.forEach(input => {
+      input.addEventListener('input', updateScore);
+      input.addEventListener('change', updateScore);
     });
 
-    const approveBtn = this.findEl('button', 'اعتماد') || this.findEl('button', 'حفظ التقييم');
-    if (approveBtn) {
-      approveBtn.addEventListener('click', (e) => {
+    // Action: تثبيت كمرشح أول
+    const primaryCandidateBtn = this.findEl('button', 'تثبيت كمرشح أول');
+    if (primaryCandidateBtn) {
+      primaryCandidateBtn.addEventListener('click', (e) => {
         e.preventDefault();
-        if (window.router) window.router.showToast('تم اعتماد تقييم لجنة المقابلات بنجاح وإرسال التوصية للإدارة الأكاديمية.', 'success');
+        if (window.router) {
+          window.router.showToast('تم اعتماد وتثبيت أ. عمر باوزير كمرشح أول للشاغر الأكاديمي #7042 بنجاح 🏆', 'success');
+        }
+      });
+    }
+
+    // Action: دعوة المرشح للمقابلة النهائية
+    const inviteFinalBtn = this.findEl('button', 'دعوة المرشح للمقابلة النهائية');
+    if (inviteFinalBtn) {
+      inviteFinalBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (window.router) {
+          window.router.showToast('تم إرسال دعوة المقابلة النهائية الرسمية للمرشح أ. عمر باوزير 📅', 'success');
+        }
+      });
+    }
+
+    // Action: إصدار خطاب العرض الوظيفي المباشر
+    const offerLetterBtn = this.findEl('button', 'إصدار خطاب العرض الوظيفي المباشر');
+    if (offerLetterBtn) {
+      offerLetterBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (window.router) {
+          window.router.showToast('تم إنشاء مسودة العرض الوظيفي ومزامنتها بنجاح مع إدارة مجمع المناهل بالمكلا ✍️', 'success');
+        }
+      });
+    }
+
+    // Action: اختيار كمرشح بديل
+    const backupCandidateBtn = this.findEl('button', 'اختيار كمرشح بديل');
+    if (backupCandidateBtn) {
+      backupCandidateBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (window.router) {
+          window.router.showToast('تم اعتماد أ. خالد سعيد العمودي كمرشح بديل أول في قائمة الاحتياط', 'info');
+        }
+      });
+    }
+
+    // Action: تصدير Excel
+    const excelBtn = this.findEl('button', 'بيانات Excel تفصيلية');
+    if (excelBtn) {
+      excelBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (window.router) {
+          window.router.showToast('تم تجهيز وتصدير جدول المفاضلة والمقارنة بصيغة Excel (CSV) بنجاح 📊', 'success');
+        }
       });
     }
   }

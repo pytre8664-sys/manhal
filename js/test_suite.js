@@ -152,6 +152,49 @@ transitionSimulations.forEach(sim => {
   assert(isValid, `الانتقال السلس من [${sim.from}] إلى [${sim.to}] جاهز ومؤكد`);
 });
 
+// TEST 7: Clean Code & Generative Artifacts Elimination (فحص خلو المشروع من الشوائب التوليدية)
+console.log('\n🧹 اختبار 7: فحص خلو الواجهات والأكواد من الشوائب والمخلفات التوليدية');
+let dataAltCount = 0;
+let promptAltCount = 0;
+let alertCount = 0;
+
+expectedRoutes.forEach(route => {
+  const content = parsedViews[route] ? parsedViews[route].html : '';
+  if (content.includes('data-alt')) {
+    dataAltCount++;
+  }
+  const promptAlts = content.match(/alt=["'][^"']*(?:color:|photo|minimalist|render|hyperrealistic)[^"']*["']/gi);
+  if (promptAlts) {
+    promptAltCount += promptAlts.length;
+  }
+  if (content.includes('alert(')) {
+    alertCount++;
+  }
+});
+
+const interactionsJs = fs.readFileSync(path.join(projectRoot, 'js', 'interactions.js'), 'utf8');
+
+assert(dataAltCount === 0, `خلو جميع الواجهات الـ 12 من سمة data-alt التوليدية (المتبقي: ${dataAltCount})`);
+assert(promptAltCount === 0, `خلو سمات alt للصور والشعارات من نصوص موجهات التوليد (المتبقي: ${promptAltCount})`);
+assert(alertCount === 0, `خلو الواجهات من نوافذ alert() واستبدالها بنظام إشعارات Toast سلس (المتبقي: ${alertCount})`);
+assert(!interactionsJs.includes('Math.random()'), 'استبدال الحسابات الوهمية والعشوائية (Math.random) بنظام تقييم حقيقي منطقي');
+
+// TEST 8: Safe DOM Selectors & Modern Web Standards (Rule 5 of AGENTS.md)
+console.log('\n🛡️ اختبار 8: التحقق من سلامة محددات الـ DOM والمعايير القياسية');
+let containsCount = 0;
+const allFilesToCheck = fs.readdirSync(viewsDir).map(f => path.join(viewsDir, f))
+  .concat(fs.readdirSync(path.join(projectRoot, 'js')).filter(f => f.endsWith('.js') && f !== 'test_suite.js').map(f => path.join(projectRoot, 'js', f)));
+
+allFilesToCheck.forEach(f => {
+  const fileContent = fs.readFileSync(f, 'utf8');
+  if (fileContent.includes(':contains(')) {
+    containsCount++;
+    console.error(`  ⚠️ محدد غير قياسي :contains في الملف: ${path.basename(f)}`);
+  }
+});
+
+assert(containsCount === 0, `خلو ملفات المشروع من محددات :contains غير المعيارية المسببة لأخطاء DOMException (المتبقي: ${containsCount})`);
+
 // Final Report Summary
 console.log('\n' + '='.repeat(70));
 console.log(`📊 النتيجة الإجمالية للفحص: ${passedTests} ناجح / ${failedTests} فاشل من إجمالي ${totalTests} فحصاً`);

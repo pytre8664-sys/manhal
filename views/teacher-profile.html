@@ -4,18 +4,18 @@
 <div class="flex items-center justify-between h-20">
 <!-- Platform Logo -->
 <div class="flex items-center gap-3">
-<a aria-label="الصفحة الرئيسية لمنصة وصل التعليمية" class="block focus:outline-none" href="#">
+<a aria-label="الصفحة الرئيسية لمنصة وصل التعليمية" class="block focus:outline-none" data-path="home" href="#">
 <img alt="شعار منصة وصل التعليمية" class="h-11 sm:h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XWEWsMFY3QM_O7qGyNkUMU1k_SlETmSUKAn7LNouBsoj3QCpJi3_o8iW3yXAMnlsCS7dtkcpkBTROWBgbi2MVt3qXL1wl5vZdzIR00H_o6KkGrWLQKJ0LMMUNhFze-suGaiPrAPLL3xPWD3oT-Qbs7qVZ-JN9FvP3_HfmQTpcZ99rxPE9eDY5_-uiHMNIpE2CvlnawTP7M70dBaWPvVQZ-nMnghoVona7gQJsTu5Aj2VMCLJUyw2UOmmA"/>
 </a>
 </div>
 <!-- Navigation Links -->
 <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-700">
-<a class="text-slate-600 hover:text-brand-700 transition" href="#">الرئيسية</a>
-<a class="text-brand-700 font-bold transition" href="#">ابحث عن معلم</a>
-<a class="text-slate-600 hover:text-brand-700 transition" href="#">للمدارس</a>
-<a class="text-slate-600 hover:text-brand-700 transition" href="#">لأولياء الأمور</a>
-<a class="text-slate-600 hover:text-brand-700 transition" href="#">انضم كمعلم</a>
-<a class="text-slate-600 hover:text-brand-700 transition" href="#">كيف نعمل</a>
+<a class="text-slate-600 hover:text-brand-700 transition" data-path="home" href="#">الرئيسية</a>
+<a class="text-brand-700 font-bold transition" data-path="find-teachers" href="#">ابحث عن معلم</a>
+<a class="text-slate-600 hover:text-brand-700 transition" data-path="school-dashboard" href="#">للمدارس</a>
+<a class="text-slate-600 hover:text-brand-700 transition" data-path="parent-hub" href="#">لأولياء الأمور</a>
+<a class="text-slate-600 hover:text-brand-700 transition" data-path="teacher-workspace" href="#">انضم كمعلم</a>
+<a class="text-slate-600 hover:text-brand-700 transition" data-path="home" href="#">كيف نعمل</a>
 </nav>
 <!-- User Controls / Auth -->
 <div class="flex items-center gap-3">
@@ -23,7 +23,7 @@
 <i class="fa-solid fa-globe text-slate-500"></i>
 <span>EN</span>
 </button>
-<a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-700 hover:bg-brand-800 text-white text-sm font-bold shadow-md shadow-brand-700/20 transition-all hover:shadow-lg hover:shadow-brand-700/30" href="#">
+<a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-700 hover:bg-brand-800 text-white text-sm font-bold shadow-md shadow-brand-700/20 transition-all hover:shadow-lg hover:shadow-brand-700/30" data-path="role-select" href="#">
 <i class="fa-regular fa-user text-xs"></i>
 <span>تسجيل الدخول</span>
 </a>
@@ -38,9 +38,9 @@
 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
 <!-- Breadcrumb Links -->
 <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-xs font-medium text-slate-500">
-<a class="hover:text-brand-700 transition" href="#"><i class="fa-solid fa-house ml-1"></i>الرئيسية</a>
+<a class="hover:text-brand-700 transition" data-path="home" href="#"><i class="fa-solid fa-house ml-1"></i>الرئيسية</a>
 <i class="fa-solid fa-chevron-left text-[9px] text-slate-400"></i>
-<a class="hover:text-brand-700 transition" href="#">ابحث عن معلم</a>
+<a class="hover:text-brand-700 transition" data-path="find-teachers" href="#">ابحث عن معلم</a>
 <i class="fa-solid fa-chevron-left text-[9px] text-slate-400"></i>
 <span class="text-brand-800 font-bold">أ. عمر سالم باوزير</span>
 </nav>
@@ -558,7 +558,7 @@
 <p class="text-xs text-slate-500 mb-4">
               أدخل تفاصيل الطلب وسيصل إشعار فوري للأستاذ على هاتفه لتأكيد الموعد والتواصل معكم.
             </p>
-<form action="#" class="space-y-3.5" method="POST" onsubmit="event.preventDefault(); alert('تم إرسال طلبكم بنجاح! سيتواصل الأستاذ عمر معكم خلال أقل من ساعتين.');">
+<form action="#" class="space-y-3.5" method="POST" onsubmit="event.preventDefault(); if (window.router) window.router.showToast('تم إرسال طلبكم بنجاح! سيتواصل الأستاذ عمر معكم خلال أقل من ساعتين.', 'success');">
 <!-- Beneficiary Type -->
 <div>
 <label class="block text-xs font-bold text-slate-700 mb-1">أنت تتواصل بصفتك:</label>
@@ -683,7 +683,7 @@
 </div>
 </div>
 <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
-            منصة وصل التعليمية — المنصة الوطنية الأولى لربط نخبة المعلمين المؤهلين بالمدارس وأولياء الأمور في الجمهورية اليمنية. نوثق الشهادات، ونضمن الكفاءة، ونسهّل الوصول إلى التعليم المتميز.
+            منصة وصل التعليمية — المنصة الأولى لربط نخبة المعلمين المؤهلين بالمدارس وأولياء الأمور في مدينة المكلا وضواحيها. نوثق الشهادات، ونضمن الكفاءة، ونسهّل الوصول إلى التعليم المتميز.
           </p>
 <div class="flex items-center gap-3 text-sm text-slate-400">
 <a class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-700 hover:text-white transition" href="#"><i class="fa-brands fa-facebook-f"></i></a>
