@@ -1,0 +1,759 @@
+<!-- BEGIN: MainHeader -->
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm" data-purpose="global-navigation">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-20">
+<!-- Platform Logo -->
+<div class="flex items-center gap-3">
+<a aria-label="الصفحة الرئيسية لمنصة وصل التعليمية" class="block focus:outline-none" href="#">
+<img alt="شعار منصة وصل التعليمية" class="h-11 sm:h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XWEWsMFY3QM_O7qGyNkUMU1k_SlETmSUKAn7LNouBsoj3QCpJi3_o8iW3yXAMnlsCS7dtkcpkBTROWBgbi2MVt3qXL1wl5vZdzIR00H_o6KkGrWLQKJ0LMMUNhFze-suGaiPrAPLL3xPWD3oT-Qbs7qVZ-JN9FvP3_HfmQTpcZ99rxPE9eDY5_-uiHMNIpE2CvlnawTP7M70dBaWPvVQZ-nMnghoVona7gQJsTu5Aj2VMCLJUyw2UOmmA"/>
+</a>
+</div>
+<!-- Navigation Links -->
+<nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-700">
+<a class="text-slate-600 hover:text-brand-700 transition" href="#">الرئيسية</a>
+<a class="text-brand-700 font-bold transition" href="#">ابحث عن معلم</a>
+<a class="text-slate-600 hover:text-brand-700 transition" href="#">للمدارس</a>
+<a class="text-slate-600 hover:text-brand-700 transition" href="#">لأولياء الأمور</a>
+<a class="text-slate-600 hover:text-brand-700 transition" href="#">انضم كمعلم</a>
+<a class="text-slate-600 hover:text-brand-700 transition" href="#">كيف نعمل</a>
+</nav>
+<!-- User Controls / Auth -->
+<div class="flex items-center gap-3">
+<button class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-slate-600 bg-slate-100 rounded-lg hover:bg-slate-200 transition" type="button">
+<i class="fa-solid fa-globe text-slate-500"></i>
+<span>EN</span>
+</button>
+<a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-700 hover:bg-brand-800 text-white text-sm font-bold shadow-md shadow-brand-700/20 transition-all hover:shadow-lg hover:shadow-brand-700/30" href="#">
+<i class="fa-regular fa-user text-xs"></i>
+<span>تسجيل الدخول</span>
+</a>
+</div>
+</div>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: BreadcrumbAndActions -->
+<section class="bg-slate-50 border-b border-slate-200/80 py-3.5" data-purpose="breadcrumbs-and-actions">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<!-- Breadcrumb Links -->
+<nav aria-label="Breadcrumb" class="flex items-center gap-2 text-xs font-medium text-slate-500">
+<a class="hover:text-brand-700 transition" href="#"><i class="fa-solid fa-house ml-1"></i>الرئيسية</a>
+<i class="fa-solid fa-chevron-left text-[9px] text-slate-400"></i>
+<a class="hover:text-brand-700 transition" href="#">ابحث عن معلم</a>
+<i class="fa-solid fa-chevron-left text-[9px] text-slate-400"></i>
+<span class="text-brand-800 font-bold">أ. عمر سالم باوزير</span>
+</nav>
+<!-- Quick Action Toolbars -->
+<div class="flex items-center gap-2 text-xs">
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-medium transition shadow-sm" type="button">
+<i class="fa-regular fa-bookmark text-brand-600"></i>
+<span>حفظ</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-medium transition shadow-sm" type="button">
+<i class="fa-solid fa-share-nodes text-slate-600"></i>
+<span>مشاركة</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-medium transition shadow-sm" type="button">
+<i class="fa-regular fa-copy text-slate-600"></i>
+<span>نسخ الرابط</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-brand-50 border border-brand-200 text-brand-800 font-bold hover:bg-brand-100 transition shadow-sm" type="button">
+<i class="fa-regular fa-file-pdf text-brand-700"></i>
+<span>السيرة PDF</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- END: BreadcrumbAndActions -->
+<!-- BEGIN: MainContent -->
+<main class="flex-grow py-8 lg:py-10">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+<!-- BEGIN: HeroProfileCard -->
+<section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-100 smooth-shadow relative overflow-hidden" data-purpose="teacher-hero-card">
+<!-- Subtle Background Decorative Graphic -->
+<div class="absolute -top-24 -left-24 w-80 h-80 rounded-full bg-brand-50/70 pointer-events-none blur-3xl"></div>
+<div class="absolute top-1/2 -right-20 w-60 h-60 rounded-full bg-emerald-50/60 pointer-events-none blur-2xl"></div>
+<div class="relative flex flex-col lg:flex-row gap-6 lg:gap-8 items-start">
+<!-- Avatar Frame with Verified Badge -->
+<div class="relative mx-auto lg:mx-0 flex-shrink-0">
+<div class="w-36 h-36 sm:w-44 sm:h-44 rounded-2xl overflow-hidden ring-4 ring-brand-100 shadow-md">
+<img alt="أ. عمر سالم باوزير - معلم رياضيات وفيزياء" class="w-full h-full object-cover object-top" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQKcDG2MA1nYUku8D0MWFlc6uXCDoXF7M8SdVt3bo81lS2_a3ePalj7KSOXdv_c1nGGHoSctXbwvMH3lSSpltmvjtbNi8sbTMT3Dhk-jVeccWzBOJS3h9J6_lD9b6xN5wUe8nqOM-4bfBIIXPubKC5GjaIw-Tm8u-kB9t8JtIRlktt0cjOZ0QQPmY1eSXJH_NeJ_jEZS5JUCRn-ASlPq3jGKv-6zZ8cfbWb0iqtwKSTKE2WIrQn0xTNQ"/>
+</div>
+<div class="absolute -bottom-2.5 -right-2.5 bg-emerald-600 text-white p-2 rounded-xl border-2 border-white badge-glow flex items-center justify-center shadow" title="معلم موثق الهوية والأوراق الأكاديمية">
+<i class="fa-solid fa-shield-check text-base"></i>
+</div>
+</div>
+<!-- Profile Essentials & Meta -->
+<div class="flex-1 text-center lg:text-right space-y-4">
+<div>
+<div class="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 mb-2">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-brand-100 text-brand-800">
+<i class="fa-solid fa-crown text-amber-500"></i>
+                  معلم متميز معتمد
+                </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
+<i class="fa-solid fa-circle-check text-emerald-500"></i>
+                  تم التدقيق الأكاديمي الشامل
+                </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-amber-50 text-amber-800 border border-amber-200">
+<i class="fa-solid fa-bolt text-amber-500"></i>
+                  رد سريع (خلال ساعتين)
+                </span>
+</div>
+<h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                أ. عمر سالم باوزير
+              </h1>
+<p class="text-slate-600 font-medium text-base sm:text-lg mt-1">
+                معلم أول لمادتي الرياضيات المتقدمة والفيزياء — الثانوية العامة (القسم العلمي)
+              </p>
+</div>
+<!-- Key Quick Stats Grid -->
+<div class="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-6 gap-3 pt-2">
+<div class="bg-slate-50 border border-slate-100 rounded-xl p-3 text-center stat-pill">
+<span class="block text-xs text-slate-500 mb-0.5">الموقع والنطاق</span>
+<span class="font-bold text-slate-800 text-sm flex items-center justify-center gap-1">
+<i class="fa-solid fa-location-dot text-brand-600 text-xs"></i> المكلا
+                </span>
+<span class="text-[11px] text-slate-500 block truncate">فوه، الديس، الشرج</span>
+</div>
+<div class="bg-slate-50 border border-slate-100 rounded-xl p-3 text-center stat-pill">
+<span class="block text-xs text-slate-500 mb-0.5">نمط التدريس</span>
+<span class="font-bold text-slate-800 text-sm flex items-center justify-center gap-1">
+<i class="fa-solid fa-person-chalkboard text-brand-600 text-xs"></i> هجين
+                </span>
+<span class="text-[11px] text-slate-500 block">حضوري + عن بُعد</span>
+</div>
+<div class="bg-slate-50 border border-slate-100 rounded-xl p-3 text-center stat-pill">
+<span class="block text-xs text-slate-500 mb-0.5">سنوات الخبرة</span>
+<span class="font-bold text-brand-700 text-sm flex items-center justify-center gap-1">
+<i class="fa-solid fa-calendar-check text-xs"></i> 8+ سنوات
+                </span>
+<span class="text-[11px] text-slate-500 block">مدارس ومجموعات</span>
+</div>
+<div class="bg-slate-50 border border-slate-100 rounded-xl p-3 text-center stat-pill">
+<span class="block text-xs text-slate-500 mb-0.5">متوسط التسعيرة</span>
+<span class="font-bold text-slate-800 text-sm">4,000 - 5,000</span>
+<span class="text-[11px] text-slate-500 block">ريال / الحصة (ساعتان)</span>
+</div>
+<div class="bg-slate-50 border border-slate-100 rounded-xl p-3 text-center stat-pill">
+<span class="block text-xs text-slate-500 mb-0.5">التقييم العام</span>
+<span class="font-bold text-amber-500 text-sm flex items-center justify-center gap-1">
+<i class="fa-solid fa-star text-xs"></i> 4.9 <span class="text-slate-400 font-normal">/ 5.0</span>
+</span>
+<span class="text-[11px] text-slate-500 block">38 تقييم موثق</span>
+</div>
+<div class="bg-slate-50 border border-slate-100 rounded-xl p-3 text-center stat-pill">
+<span class="block text-xs text-slate-500 mb-0.5">معدل الإنجاز</span>
+<span class="font-bold text-emerald-600 text-sm flex items-center justify-center gap-1">
+<i class="fa-solid fa-award text-xs"></i> 94%
+                </span>
+<span class="text-[11px] text-slate-500 block">نسبة تفوق طلابه</span>
+</div>
+</div>
+<!-- Profile CTA Action Row -->
+<div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-slate-100">
+<div class="flex items-center gap-3 w-full sm:w-auto">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3 rounded-xl bg-brand-700 hover:bg-brand-800 text-white font-bold text-sm shadow-md shadow-brand-700/25 transition" href="#booking-section">
+<i class="fa-regular fa-paper-plane"></i>
+<span>إرسال طلب تواصل وحجز</span>
+</a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl border border-slate-300 bg-white hover:bg-slate-50 text-slate-700 font-bold text-sm transition" href="#contact-inquiry">
+<i class="fa-regular fa-comment-dots text-brand-600"></i>
+<span>طرح استفسار</span>
+</a>
+</div>
+<!-- Safety Notice -->
+<div class="flex items-center gap-2 text-xs text-slate-500 bg-slate-50 px-3.5 py-2 rounded-xl border border-slate-100">
+<i class="fa-solid fa-shield-halved text-brand-600 text-sm"></i>
+<span>ضمان أمان منصة وصل: يُتاح رقم الواتساب المباشر فور تأكيد المعلم للشواغر.</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroProfileCard -->
+<!-- BEGIN: ContentLayoutGrid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- BEGIN: RightMainColumn (Detailed Specs) -->
+<div class="lg:col-span-8 space-y-8" data-purpose="teacher-detailed-information">
+<!-- Bio & Teaching Philosophy -->
+<article class="bg-white rounded-2xl p-6 sm:p-7 border border-slate-100 smooth-shadow">
+<h2 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2.5">
+<span class="w-2.5 h-6 rounded-full bg-brand-700 inline-block"></span>
+              نبذة تعريفية وفلسفة التدريس
+            </h2>
+<div class="prose max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-3 font-normal">
+<p>
+                مرحباً بكم، أنا عمر باوزير، مُعلم شغوف بمادتي الرياضيات التطبيقية والفيزياء بخبرة تتجاوز 8 سنوات في تدريس مقررات الثانوية العامة للقسم العلمي في مدارس وثانويات محافظة المكلا، بالإضافة إلى إعداد النماذج الوزارية وتدريب الطلاب على أنماط الاختبارات النهائية المؤتمتة والتفاضلية.
+              </p>
+<p>
+                فلسفتي في التعليم لا تعتمد على التلقين أو الحفظ الجاف للقوانين، بل ترتكز على <strong class="text-brand-800">تبسيط المفهوم الفيزيائي والربط الرياضي المنطقي</strong>، وتحويل المسألة الرياضية المعقدة إلى خطوات عقلية متسلسلة يمكن للطالب حلها بثقة تامة ودون خوف من ضيق وقت الامتحان الوزاري.
+              </p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-3">
+<div class="p-3 bg-brand-50/60 border border-brand-100 rounded-xl">
+<div class="font-bold text-brand-900 text-sm mb-1"><i class="fa-solid fa-brain-circuit ml-1 text-brand-600"></i> تفكيك التعقيد</div>
+<p class="text-xs text-slate-600">شرح معمق للقوانين وتطبيقاتها الحياتية الملموسة.</p>
+</div>
+<div class="p-3 bg-brand-50/60 border border-brand-100 rounded-xl">
+<div class="font-bold text-brand-900 text-sm mb-1"><i class="fa-solid fa-stopwatch ml-1 text-brand-600"></i> استراتيجيات السرعة</div>
+<p class="text-xs text-slate-600">تدريب مكثف على مهارات حل الأسئلة الوزارية ذات الاختيار المتعدد.</p>
+</div>
+<div class="p-3 bg-brand-50/60 border border-brand-100 rounded-xl">
+<div class="font-bold text-brand-900 text-sm mb-1"><i class="fa-solid fa-heart-pulse ml-1 text-brand-600"></i> دعم نفسي مستمر</div>
+<p class="text-xs text-slate-600">تهيئة الطالب لتجاوز قلق امتحانات الثانوية العامة بثبات.</p>
+</div>
+</div>
+</div>
+</article>
+<!-- Subjects & Grade Levels -->
+<article class="bg-white rounded-2xl p-6 sm:p-7 border border-slate-100 smooth-shadow">
+<div class="flex items-center justify-between mb-5">
+<h2 class="text-xl font-bold text-slate-900 flex items-center gap-2.5">
+<span class="w-2.5 h-6 rounded-full bg-brand-700 inline-block"></span>
+                المواد والمقررات التي يدرسها
+              </h2>
+<span class="text-xs font-semibold text-brand-700 bg-brand-50 px-3 py-1 rounded-lg">المنهج الوزاري المعتمد</span>
+</div>
+<div class="space-y-4">
+<!-- Item 1: Math -->
+<div class="p-4 rounded-xl border border-slate-200 bg-slate-50/60 hover:border-brand-300 transition">
+<div class="flex items-start justify-between gap-4">
+<div class="flex items-start gap-3.5">
+<div class="w-11 h-11 rounded-xl bg-brand-100 text-brand-800 flex items-center justify-center flex-shrink-0 text-lg">
+<i class="fa-solid fa-square-root-variable"></i>
+</div>
+<div>
+<h3 class="font-bold text-slate-900 text-base">الرياضيات المتقدمة (ثالث ثانوي - علمي)</h3>
+<p class="text-xs text-slate-600 mt-1 leading-normal">
+                        يشمل: التفاضل والتكامل، الهندسة الفراغية، الجبر التوافقي ومبدأ العد، الأعداد المركبة والاحتمالات. تدريب على حل نماذج الوزارة للأعوام الـ 10 السابقة.
+                      </p>
+<div class="flex flex-wrap gap-2 mt-2.5">
+<span class="text-[11px] font-semibold bg-white border border-slate-200 px-2.5 py-0.5 rounded-md text-slate-700">حضوري للمنازل والمجموعات</span>
+<span class="text-[11px] font-semibold bg-white border border-slate-200 px-2.5 py-0.5 rounded-md text-slate-700">حصص تفاعلية Zoom</span>
+<span class="text-[11px] font-semibold bg-emerald-100 text-emerald-800 px-2.5 py-0.5 rounded-md">مذكرات خاصة مجانية</span>
+</div>
+</div>
+</div>
+<div class="text-left flex-shrink-0">
+<span class="text-xs font-medium text-slate-500 block">التسعيرة</span>
+<span class="font-extrabold text-brand-800 text-base">4,500</span>
+<span class="text-[10px] text-slate-400 block">ريال / ساعة ونص</span>
+</div>
+</div>
+</div>
+<!-- Item 2: Physics -->
+<div class="p-4 rounded-xl border border-slate-200 bg-slate-50/60 hover:border-brand-300 transition">
+<div class="flex items-start justify-between gap-4">
+<div class="flex items-start gap-3.5">
+<div class="w-11 h-11 rounded-xl bg-indigo-100 text-indigo-800 flex items-center justify-center flex-shrink-0 text-lg">
+<i class="fa-solid fa-atom"></i>
+</div>
+<div>
+<h3 class="font-bold text-slate-900 text-base">الفيزياء التخصصية (ثالث ثانوي - علمي)</h3>
+<p class="text-xs text-slate-600 mt-1 leading-normal">
+                        يشمل: الديناميكا الحرارية، الحركة الموجية، الكهرومغناطيسية، والفيزياء الذرية والنووية. تركيز خاص على حل المسائل الحسابية وتطبيقات الدوائر الكهربائية.
+                      </p>
+<div class="flex flex-wrap gap-2 mt-2.5">
+<span class="text-[11px] font-semibold bg-white border border-slate-200 px-2.5 py-0.5 rounded-md text-slate-700">شرح التجارب العلمية محاكاة</span>
+<span class="text-[11px] font-semibold bg-white border border-slate-200 px-2.5 py-0.5 rounded-md text-slate-700">متابعة الواجبات أسبوعياً</span>
+</div>
+</div>
+</div>
+<div class="text-left flex-shrink-0">
+<span class="text-xs font-medium text-slate-500 block">التسعيرة</span>
+<span class="font-extrabold text-brand-800 text-base">4,500</span>
+<span class="text-[10px] text-slate-400 block">ريال / ساعة ونص</span>
+</div>
+</div>
+</div>
+<!-- Item 3: Intensive Crash Courses -->
+<div class="p-4 rounded-xl border border-slate-200 bg-slate-50/60 hover:border-brand-300 transition">
+<div class="flex items-start justify-between gap-4">
+<div class="flex items-start gap-3.5">
+<div class="w-11 h-11 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center flex-shrink-0 text-lg">
+<i class="fa-solid fa-fire"></i>
+</div>
+<div>
+<h3 class="font-bold text-slate-900 text-base">معسكرات المراجعات النهائية الوزارية المكثفة</h3>
+<p class="text-xs text-slate-600 mt-1 leading-normal">
+                        دورات مكثفة تنعقد قبل الامتحانات الوزارية بشهرين لتغطية التوقعات المهمة وحل أكثر من 500 سؤال مؤتمت مع مهارات الاستبعاد والحل السريع.
+                      </p>
+</div>
+</div>
+<div class="text-left flex-shrink-0">
+<span class="text-xs font-medium text-slate-500 block">بنظام</span>
+<span class="font-extrabold text-brand-800 text-base">المجموعات</span>
+<span class="text-[10px] text-slate-400 block">أو تدريس فردي</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Verified Credentials & Degrees -->
+<article class="bg-white rounded-2xl p-6 sm:p-7 border border-slate-100 smooth-shadow">
+<h2 class="text-xl font-bold text-slate-900 mb-5 flex items-center gap-2.5">
+<span class="w-2.5 h-6 rounded-full bg-brand-700 inline-block"></span>
+              المؤهلات الأكاديمية والشهادات المهنية
+            </h2>
+<div class="relative border-r-2 border-brand-200 mr-3 space-y-6">
+<!-- Credential 1 -->
+<div class="relative pr-6">
+<span class="absolute -right-2 top-1 w-4 h-4 rounded-full bg-brand-700 ring-4 ring-brand-100"></span>
+<span class="text-xs font-bold text-brand-700">2012 - 2016</span>
+<h3 class="font-bold text-slate-900 text-base">بكالوريوس التربية في الرياضيات والفيزياء (امتياز مع مرتبة الشرف)</h3>
+<p class="text-xs text-slate-600 mt-0.5">جامعة المكلا — كلية التربية بالمكلا</p>
+<div class="mt-2 inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-semibold">
+<i class="fa-solid fa-check text-[10px]"></i>
+<span>تم فحص الوثيقة وسجل الدرجات من فريق وصل</span>
+</div>
+</div>
+<!-- Credential 2 -->
+<div class="relative pr-6">
+<span class="absolute -right-2 top-1 w-4 h-4 rounded-full bg-brand-700 ring-4 ring-brand-100"></span>
+<span class="text-xs font-bold text-brand-700">2018</span>
+<h3 class="font-bold text-slate-900 text-base">دبلوم التأهيل التربوي وطرق التدريس الحديثة وإدارة البيئة الصفية</h3>
+<p class="text-xs text-slate-600 mt-0.5">المعهد العالي لتأهيل المعلمين ومكتب التربية</p>
+</div>
+<!-- Credential 3 -->
+<div class="relative pr-6">
+<span class="absolute -right-2 top-1 w-4 h-4 rounded-full bg-brand-700 ring-4 ring-brand-100"></span>
+<span class="text-xs font-bold text-brand-700">2021</span>
+<h3 class="font-bold text-slate-900 text-base">شهادة تدريب مدربي اختبارات الثانوية العامة (TOT) وصياغة بنوك الأسئلة</h3>
+<p class="text-xs text-slate-600 mt-0.5">مؤسسة التدريب والتطوير التعليمي بالتعاون مع لجان الامتحانات</p>
+</div>
+</div>
+</article>
+<!-- Trust & Verification Center -->
+<article class="bg-gradient-to-br from-brand-900 to-indigo-950 text-white rounded-2xl p-6 sm:p-7 shadow-xl">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/10 pb-5">
+<div>
+<h2 class="text-lg sm:text-xl font-bold flex items-center gap-2">
+<i class="fa-solid fa-shield-halved text-emerald-400"></i>
+                  مركز التوثيق والتحقق الشفاف - منصة وصل
+                </h2>
+<p class="text-xs text-brand-200 mt-1">تضمن منصة وصل سلامة البيانات ومطابقة المؤهلات الرسمية 100% لحماية الطلاب والمدارس</p>
+</div>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 text-xs font-bold self-start sm:self-auto">
+<i class="fa-solid fa-circle-check"></i>
+                حساب مكتمل التوثيق (Level 4)
+              </span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 pt-5">
+<div class="bg-white/5 border border-white/10 rounded-xl p-3.5 backdrop-blur-sm">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs text-brand-200">الهوية الوطنية</span>
+<i class="fa-solid fa-circle-check text-emerald-400 text-sm"></i>
+</div>
+<div class="font-bold text-sm">موثقة ومطابقة</div>
+<span class="text-[10px] text-slate-300 block mt-1">بطاقة شخصية سارية المفعول</span>
+</div>
+<div class="bg-white/5 border border-white/10 rounded-xl p-3.5 backdrop-blur-sm">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs text-brand-200">المؤهل الجامعي</span>
+<i class="fa-solid fa-circle-check text-emerald-400 text-sm"></i>
+</div>
+<div class="font-bold text-sm">معتمد رسمياً</div>
+<span class="text-[10px] text-slate-300 block mt-1">تصديق التعليم العالي والجامعة</span>
+</div>
+<div class="bg-white/5 border border-white/10 rounded-xl p-3.5 backdrop-blur-sm">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs text-brand-200">فحص السيرة والسجل</span>
+<i class="fa-solid fa-circle-check text-emerald-400 text-sm"></i>
+</div>
+<div class="font-bold text-sm">سجل جنائي سليم</div>
+<span class="text-[10px] text-slate-300 block mt-1">تحري أمني وتربوي كامل</span>
+</div>
+<div class="bg-white/5 border border-white/10 rounded-xl p-3.5 backdrop-blur-sm">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs text-brand-200">تزكيات المدارس</span>
+<i class="fa-solid fa-circle-check text-emerald-400 text-sm"></i>
+</div>
+<div class="font-bold text-sm">3 خطابات تزكية</div>
+<span class="text-[10px] text-slate-300 block mt-1">من إدارات ثانويات بالمكلا</span>
+</div>
+</div>
+</article>
+<!-- Authentic Reviews & Ratings Section -->
+<article class="bg-white rounded-2xl p-6 sm:p-7 border border-slate-100 smooth-shadow" data-purpose="ratings-and-reviews">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+<div>
+<h2 class="text-xl font-bold text-slate-900 flex items-center gap-2.5">
+<span class="w-2.5 h-6 rounded-full bg-brand-700 inline-block"></span>
+                  تقييمات وتجارب واقعية
+                </h2>
+<p class="text-xs text-slate-500 mt-1">جميع التقييمات من أولياء أمور ومدارس أكملوا دروساً عبر المنصة</p>
+</div>
+<!-- Overall Score -->
+<div class="flex items-center gap-3 bg-amber-50/80 border border-amber-200/80 px-4 py-2 rounded-xl self-start sm:self-auto">
+<div class="text-2xl font-black text-amber-600">4.9</div>
+<div class="text-right">
+<div class="flex text-amber-400 text-xs">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star-half-stroke"></i>
+</div>
+<span class="text-[10px] font-semibold text-amber-900">38 ولي أمر ومدرسة</span>
+</div>
+</div>
+</div>
+<!-- Detailed Breakdown Bars -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pb-6 mb-6 border-b border-slate-100">
+<div class="space-y-2 text-xs">
+<div class="flex justify-between font-medium">
+<span class="text-slate-600">القدرة على التبسيط وإيصال المعلومة</span>
+<span class="font-bold text-slate-800">5.0</span>
+</div>
+<div class="h-2 bg-slate-100 rounded-full overflow-hidden">
+<div class="h-full bg-emerald-500 rounded-full" style="width: 100%"></div>
+</div>
+</div>
+<div class="space-y-2 text-xs">
+<div class="flex justify-between font-medium">
+<span class="text-slate-600">الالتزام بالمواعيد والانضباط</span>
+<span class="font-bold text-slate-800">4.9</span>
+</div>
+<div class="h-2 bg-slate-100 rounded-full overflow-hidden">
+<div class="h-full bg-emerald-500 rounded-full" style="width: 98%"></div>
+</div>
+</div>
+<div class="space-y-2 text-xs">
+<div class="flex justify-between font-medium">
+<span class="text-slate-600">التعامل التربوي وتشجيع الطالب</span>
+<span class="font-bold text-slate-800">4.9</span>
+</div>
+<div class="h-2 bg-slate-100 rounded-full overflow-hidden">
+<div class="h-full bg-emerald-500 rounded-full" style="width: 98%"></div>
+</div>
+</div>
+<div class="space-y-2 text-xs">
+<div class="flex justify-between font-medium">
+<span class="text-slate-600">تغطية النماذج الوزارية الشاملة</span>
+<span class="font-bold text-slate-800">4.8</span>
+</div>
+<div class="h-2 bg-slate-100 rounded-full overflow-hidden">
+<div class="h-full bg-emerald-500 rounded-full" style="width: 96%"></div>
+</div>
+</div>
+</div>
+<!-- Testimonials List -->
+<div class="space-y-4">
+<!-- Review 1 -->
+<div class="p-4 rounded-xl bg-slate-50 border border-slate-100 text-sm">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-brand-100 text-brand-800 font-bold text-xs flex items-center justify-center">
+                      م.ع
+                    </div>
+<div>
+<span class="font-bold text-slate-800 text-xs block">م. عبدالله العطاس</span>
+<span class="text-[10px] text-slate-500">ولي أمر الطالب أحمد (ثالث ثانوي علمي) - المكلا، فوه</span>
+</div>
+</div>
+<div class="flex text-amber-400 text-xs">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+</div>
+</div>
+<p class="text-slate-600 text-xs leading-relaxed">
+                  "أستاذ عمر من خيرة المعلمين الذين تعاملنا معهم. ابني كان يواجه عقدة في التفاضل والتكامل وكان يخاف من مادة الرياضيات، والحمد لله بعد شهرين من المتابعة الدورية ارتفعت علاماته وارتفعت معنوياته بشكل غير مسبوق وحقق 96% في الاختبار التجريبي."
+                </p>
+<span class="text-[10px] text-slate-400 mt-2 block">منذ 3 أسابيع • درس خصوصي منزلي</span>
+</div>
+<!-- Review 2 (School Principal) -->
+<div class="p-4 rounded-xl bg-slate-50 border border-slate-100 text-sm">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-indigo-100 text-indigo-800 font-bold text-xs flex items-center justify-center">
+                      ث.ن
+                    </div>
+<div>
+<span class="font-bold text-slate-800 text-xs block">إدارة ثانوية النخبة الأهلية</span>
+<span class="text-[10px] text-slate-500">تقييم مدرسي رسمي معتمد</span>
+</div>
+</div>
+<div class="flex text-amber-400 text-xs">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+</div>
+</div>
+<p class="text-slate-600 text-xs leading-relaxed">
+                  "تعاون الأستاذ عمر معنا لتقديم دورات تقوية لطلاب الثانوية العامة، انضباطه في المواعيد وقدرته على ضبط الصف وتحفيز الطلاب على حل الواجبات كانت محط إشادة من أولياء الأمور ومن الهيئة الإدارية بالكامل."
+                </p>
+<span class="text-[10px] text-slate-400 mt-2 block">منذ شهرين • تعاقد تدريس جزئي</span>
+</div>
+</div>
+<!-- View More Button -->
+<div class="mt-5 text-center">
+<button class="text-xs font-bold text-brand-700 hover:text-brand-900 transition" type="button">
+                عرض جميع التقييمات الـ 38 <i class="fa-solid fa-angle-left mr-1"></i>
+</button>
+</div>
+</article>
+</div>
+<!-- END: RightMainColumn -->
+<!-- BEGIN: LeftSidebar (Interactive Booking & Schedule) -->
+<aside class="lg:col-span-4 space-y-6" data-purpose="booking-and-sidebar">
+<!-- Weekly Availability Schedule Card -->
+<div class="bg-white rounded-2xl p-6 border border-slate-100 smooth-shadow">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-bold text-slate-900 text-base flex items-center gap-2">
+<i class="fa-regular fa-calendar-days text-brand-600"></i>
+                أوقات التوفر الأسبوعي
+              </h3>
+<span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                متاح للحجز
+              </span>
+</div>
+<p class="text-xs text-slate-500 mb-4">
+              الفترات الصباحية مخصصة للتعاقد مع الثانويات والمدارس، والفترات المسائية مخصصة للدروس الخاصة والمجموعات.
+            </p>
+<div class="space-y-2 text-xs">
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-slate-50 border border-slate-100">
+<span class="font-bold text-slate-700">السبت</span>
+<span class="text-brand-800 font-semibold bg-brand-50 px-2 py-0.5 rounded">4:00 م - 8:30 م</span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-slate-50 border border-slate-100">
+<span class="font-bold text-slate-700">الأحد</span>
+<span class="text-brand-800 font-semibold bg-brand-50 px-2 py-0.5 rounded">4:30 م - 8:00 م</span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-slate-50 border border-slate-100">
+<span class="font-bold text-slate-700">الاثنين</span>
+<span class="text-brand-800 font-semibold bg-brand-50 px-2 py-0.5 rounded">4:00 م - 8:30 م</span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-slate-50 border border-slate-100">
+<span class="font-bold text-slate-700">الثلاثاء</span>
+<span class="text-brand-800 font-semibold bg-brand-50 px-2 py-0.5 rounded">4:30 م - 8:00 م</span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-slate-50 border border-slate-100">
+<span class="font-bold text-slate-700">الأربعاء</span>
+<span class="text-brand-800 font-semibold bg-brand-50 px-2 py-0.5 rounded">4:00 م - 8:30 م</span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-slate-50 border border-slate-100">
+<span class="font-bold text-slate-700">الخميس</span>
+<span class="text-amber-700 font-semibold bg-amber-50 px-2 py-0.5 rounded">حسب التنسيق المسبق</span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-rose-50/60 border border-rose-100">
+<span class="font-bold text-rose-800">الجمعة</span>
+<span class="text-rose-600 font-semibold text-[11px]">عطلة أسبوعية</span>
+</div>
+</div>
+</div>
+<!-- Direct Request & Booking Form -->
+<div class="bg-white rounded-2xl p-6 border-2 border-brand-200 smooth-shadow relative" data-purpose="booking-contact-card" id="booking-section">
+<div class="absolute -top-3 right-6 bg-brand-700 text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-sm">
+              طلب مباشر وسريع
+            </div>
+<h3 class="text-lg font-bold text-slate-900 mb-2 mt-1">تواصل مع أ. عمر باوزير</h3>
+<p class="text-xs text-slate-500 mb-4">
+              أدخل تفاصيل الطلب وسيصل إشعار فوري للأستاذ على هاتفه لتأكيد الموعد والتواصل معكم.
+            </p>
+<form action="#" class="space-y-3.5" method="POST" onsubmit="event.preventDefault(); alert('تم إرسال طلبكم بنجاح! سيتواصل الأستاذ عمر معكم خلال أقل من ساعتين.');">
+<!-- Beneficiary Type -->
+<div>
+<label class="block text-xs font-bold text-slate-700 mb-1">أنت تتواصل بصفتك:</label>
+<div class="grid grid-cols-2 gap-2">
+<label class="flex items-center justify-center gap-1.5 p-2 rounded-lg border border-slate-200 text-xs font-medium cursor-pointer hover:bg-slate-50 has-[:checked]:border-brand-600 has-[:checked]:bg-brand-50 has-[:checked]:text-brand-900">
+<input checked="" class="sr-only" name="user_type" type="radio" value="parent"/>
+<i class="fa-solid fa-user-group text-[11px]"></i>
+<span>ولي أمر / طالب</span>
+</label>
+<label class="flex items-center justify-center gap-1.5 p-2 rounded-lg border border-slate-200 text-xs font-medium cursor-pointer hover:bg-slate-50 has-[:checked]:border-brand-600 has-[:checked]:bg-brand-50 has-[:checked]:text-brand-900">
+<input class="sr-only" name="user_type" type="radio" value="school"/>
+<i class="fa-solid fa-school text-[11px]"></i>
+<span>مدرسة / معهد</span>
+</label>
+</div>
+</div>
+<!-- Subject & Modality Selection -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+<div>
+<label class="block text-xs font-bold text-slate-700 mb-1">المادة المطلوبة</label>
+<select class="w-full text-xs rounded-xl border-slate-200 bg-slate-50 focus:border-brand-600 focus:ring-brand-600 py-2">
+<option>رياضيات ثالث ثانوي</option>
+<option>فيزياء ثالث ثانوي</option>
+<option>المادتين معاً (باقة مكثفة)</option>
+<option>مراجعة نماذج امتحانات</option>
+</select>
+</div>
+<div>
+<label class="block text-xs font-bold text-slate-700 mb-1">نمط الحصة</label>
+<select class="w-full text-xs rounded-xl border-slate-200 bg-slate-50 focus:border-brand-600 focus:ring-brand-600 py-2">
+<option>حضوري - منزلي (المكلا)</option>
+<option>أونلاين عبر المنصة</option>
+<option>تدريس مدرسي / تعاقد</option>
+</select>
+</div>
+</div>
+<!-- Parent/Requester Name -->
+<div>
+<label class="block text-xs font-bold text-slate-700 mb-1">الاسم الكريم</label>
+<input class="w-full text-xs rounded-xl border-slate-200 bg-slate-50 focus:border-brand-600 focus:ring-brand-600 py-2" placeholder="مثال: سالم صالح العطاس" required="" type="text"/>
+</div>
+<!-- Contact Phone / WhatsApp -->
+<div>
+<label class="block text-xs font-bold text-slate-700 mb-1">رقم الواتساب أو الهاتف</label>
+<input class="w-full text-xs rounded-xl border-slate-200 bg-slate-50 focus:border-brand-600 focus:ring-brand-600 py-2 text-right" dir="ltr" placeholder="+967 7X XXX XXX" required="" type="tel"/>
+</div>
+<!-- Additional Notes -->
+<div>
+<label class="block text-xs font-bold text-slate-700 mb-1">ملاحظات أو مستوى الطالب الحالي (اختياري)</label>
+<textarea class="w-full text-xs rounded-xl border-slate-200 bg-slate-50 focus:border-brand-600 focus:ring-brand-600 p-2" placeholder="مثلاً: يحتاج تركيز خاص على مسائل التفاضل والاشتقاق..." rows="2"></textarea>
+</div>
+<!-- Submit Button -->
+<button class="w-full py-3 rounded-xl bg-brand-700 hover:bg-brand-800 text-white font-bold text-sm shadow-md shadow-brand-700/25 transition" type="submit">
+                تأكيد وإرسال طلب التدريس
+              </button>
+</form>
+<div class="mt-4 pt-4 border-t border-slate-100 flex items-center justify-center gap-1.5 text-[11px] text-slate-500">
+<i class="fa-solid fa-lock text-brand-600"></i>
+<span>بياناتكم مشفرة ومحمية بخصوصية تامة</span>
+</div>
+</div>
+<!-- Platform Guarantees Banner -->
+<div class="bg-gradient-to-r from-brand-50 to-purple-50 rounded-2xl p-5 border border-brand-100">
+<h4 class="font-bold text-brand-900 text-xs mb-2 flex items-center gap-1.5">
+<i class="fa-solid fa-award text-brand-700 text-sm"></i>
+              ضمانات وتسهيلات منصة وصل
+            </h4>
+<ul class="text-xs text-slate-600 space-y-2 list-none p-0">
+<li class="flex items-start gap-2">
+<i class="fa-solid fa-check text-emerald-600 mt-0.5 text-[11px]"></i>
+<span><strong>جلسة تعارف تقييمية:</strong> إمكانية عقد لقاء أولي قصير لمناقشة مستوى الطالب وخطة الدروس.</span>
+</li>
+<li class="flex items-start gap-2">
+<i class="fa-solid fa-check text-emerald-600 mt-0.5 text-[11px]"></i>
+<span><strong>لا التزام مالي مسبق:</strong> الاتفاق والدفع يتم بالتراضي ولا تفرض المنصة أي عمولات على الطالب.</span>
+</li>
+<li class="flex items-start gap-2">
+<i class="fa-solid fa-check text-emerald-600 mt-0.5 text-[11px]"></i>
+<span><strong>دعم فني وتنسيقي:</strong> فريق وصل حاضر لمساعدتك في حال احتجت بديلاً أو تغييراً في الجدول.</span>
+</li>
+</ul>
+</div>
+<!-- Quick FAQ Accordion in Sidebar -->
+<div class="bg-white rounded-2xl p-5 border border-slate-100 smooth-shadow text-xs space-y-3">
+<h4 class="font-bold text-slate-900 mb-2">أسئلة شائعة حول الحجز:</h4>
+<details class="group border border-slate-100 rounded-lg p-2.5 bg-slate-50/50">
+<summary class="font-semibold text-slate-800 cursor-pointer list-none flex justify-between items-center">
+<span>كيف يتم تحديد مكان الحصة؟</span>
+<i class="fa-solid fa-chevron-down text-[10px] text-slate-400 group-open:rotate-180 transition"></i>
+</summary>
+<p class="mt-2 text-slate-600 text-[11px] leading-relaxed">
+                يتم التنسيق مباشرة بينكم وبين الأستاذ؛ سواء في منزلكم داخل المكلا (المناطق المحددة) أو عبر غرفة تفاعلية في منصة وصل.
+              </p>
+</details>
+<details class="group border border-slate-100 rounded-lg p-2.5 bg-slate-50/50">
+<summary class="font-semibold text-slate-800 cursor-pointer list-none flex justify-between items-center">
+<span>هل يقبل الأستاذ تدريس مجموعات؟</span>
+<i class="fa-solid fa-chevron-down text-[10px] text-slate-400 group-open:rotate-180 transition"></i>
+</summary>
+<p class="mt-2 text-slate-600 text-[11px] leading-relaxed">
+                نعم، يقبل مجموعات مصغرة من 3 إلى 6 طلاب بأسعار مخفضة لكل طالب. يمكنكم كتابة ذلك في الملاحظات.
+              </p>
+</details>
+</div>
+</aside>
+<!-- END: LeftSidebar -->
+</div>
+<!-- END: ContentLayoutGrid -->
+</div>
+</main>
+<!-- END: MainContent -->
+<!-- BEGIN: MainFooter -->
+<footer class="bg-slate-900 text-white mt-16 border-t border-slate-800 pt-12 pb-8" data-purpose="global-footer">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pb-10 border-b border-slate-800">
+<!-- About Column -->
+<div class="lg:col-span-2 space-y-4">
+<div class="flex items-center gap-2">
+<!-- Footer White Brand Version representation -->
+<div class="h-10 px-3 py-1 bg-white rounded-lg inline-flex items-center">
+<img alt="منصة وصل التعليمية" class="h-8 w-auto" src="https://lh3.googleusercontent.com/aida/AEtjO1XWEWsMFY3QM_O7qGyNkUMU1k_SlETmSUKAn7LNouBsoj3QCpJi3_o8iW3yXAMnlsCS7dtkcpkBTROWBgbi2MVt3qXL1wl5vZdzIR00H_o6KkGrWLQKJ0LMMUNhFze-suGaiPrAPLL3xPWD3oT-Qbs7qVZ-JN9FvP3_HfmQTpcZ99rxPE9eDY5_-uiHMNIpE2CvlnawTP7M70dBaWPvVQZ-nMnghoVona7gQJsTu5Aj2VMCLJUyw2UOmmA"/>
+</div>
+</div>
+<p class="text-xs text-slate-400 leading-relaxed max-w-sm">
+            منصة وصل التعليمية — المنصة الوطنية الأولى لربط نخبة المعلمين المؤهلين بالمدارس وأولياء الأمور في الجمهورية اليمنية. نوثق الشهادات، ونضمن الكفاءة، ونسهّل الوصول إلى التعليم المتميز.
+          </p>
+<div class="flex items-center gap-3 text-sm text-slate-400">
+<a class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-700 hover:text-white transition" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+<a class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-700 hover:text-white transition" href="#"><i class="fa-brands fa-whatsapp"></i></a>
+<a class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-700 hover:text-white transition" href="#"><i class="fa-brands fa-telegram"></i></a>
+<a class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-700 hover:text-white transition" href="#"><i class="fa-brands fa-youtube"></i></a>
+</div>
+</div>
+<!-- Quick Links -->
+<div class="space-y-3 text-xs">
+<h4 class="font-bold text-white text-sm">استكشف المنصة</h4>
+<ul class="space-y-2 text-slate-400">
+<li><a class="hover:text-brand-300 transition" href="#">دليل المعلمين المعتمدين</a></li>
+<li><a class="hover:text-brand-300 transition" href="#">خدمات المدارس والتوظيف</a></li>
+<li><a class="hover:text-brand-300 transition" href="#">نماذج واختبارات وزارية</a></li>
+<li><a class="hover:text-brand-300 transition" href="#">آلية فحص وتوثيق المعلمين</a></li>
+<li><a class="hover:text-brand-300 transition" href="#">شروط وضوابط الحجز</a></li>
+</ul>
+</div>
+<!-- Coverage Areas -->
+<div class="space-y-3 text-xs">
+<h4 class="font-bold text-white text-sm">مناطق الخدمة الحالية</h4>
+<ul class="space-y-2 text-slate-400">
+<li><span class="text-brand-400 font-semibold">•</span> المكلا (فوه، الديس، الشرج)</li>
+<li><span class="text-brand-400 font-semibold">•</span> فوه (المكلا) والوادي</li>
+<li><span class="text-brand-400 font-semibold">•</span> عدن (المعلا، كريتر، الشيخ عثمان)</li>
+<li><span class="text-brand-400 font-semibold">•</span> تدريس أونلاين لكافة المحافظات</li>
+</ul>
+</div>
+<!-- Support & Hotline -->
+<div class="space-y-3 text-xs">
+<h4 class="font-bold text-white text-sm">مركز المساعدة والرعاية</h4>
+<p class="text-slate-400">فريق خدمة العملاء متواجد لمساعدتكم يومياً من 8 ص - 9 م:</p>
+<div class="p-3 rounded-xl bg-slate-800/80 border border-slate-700/80 space-y-1">
+<span class="text-[11px] text-slate-400 block">واتساب الدعم السريع:</span>
+<span class="text-sm font-bold text-emerald-400 block" dir="ltr">+967 770 000 000</span>
+</div>
+<span class="text-[11px] text-slate-500 block">بريد: support@wasl-edu.ye</span>
+</div>
+</div>
+<!-- Copyright Bar -->
+<div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-3">
+<p>© 2024 منصة وصل التعليمية (Wasl Education Platform). جميع الحقوق محفوظة.</p>
+<div class="flex items-center gap-4">
+<a class="hover:text-slate-300 transition" href="#">سياسة الخصوصية</a>
+<span>•</span>
+<a class="hover:text-slate-300 transition" href="#">شروط الاستخدام</a>
+<span>•</span>
+<a class="hover:text-slate-300 transition" href="#">ميثاق حماية الطالب والمعلم</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- END: MainFooter -->
+<!-- Interactive Scripts -->
+<script data-purpose="smooth-scrolling">
+    // Smooth scrolling for in-page anchors
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href');
+        if (targetId && targetId !== '#') {
+          const target = document.querySelector(targetId);
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        }
+      });
+    });
+  </script>

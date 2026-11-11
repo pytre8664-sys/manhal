@@ -1,0 +1,21 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Start Wasl Dev Server",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/server.js",
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Run Test Suite",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/js/test_suite.js",
+      "console": "integratedTerminal"
+    }
+  ]
+}

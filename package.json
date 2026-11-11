@@ -1,0 +1,22 @@
+{
+  "name": "wasl-education-mukalla",
+  "version": "1.0.0",
+  "description": "منصة وصل التعليمية — منصة رقمية تربط المدارس وأولياء الأمور بالمعلمين (المكلا - حضرموت)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node js/test_suite.js"
+  },
+  "keywords": [
+    "education",
+    "wasl",
+    "mukalla",
+    "hadramout",
+    "teachers",
+    "schools",
+    "ux"
+  ],
+  "author": "Antigravity & User",
+  "license": "ISC"
+}
+

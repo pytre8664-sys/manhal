@@ -1,0 +1,666 @@
+<aside class="fixed right-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col py-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="px-space-lg mb-space-lg flex items-center gap-space-sm"><div class="flex items-center gap-3"><img alt="منصة وصل التعليمية" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WANGLmo77gluFNEbLuDpjFJxwDtj68HzWH0TvTUQDfPab3W5NnH8ryXhgk5a-77efXUBCD4DW2s6CktXDcJd9nM67dK8WUobF8sw0wj07cvSu6InDBLovyQd7OcWMik7KYE3GRheNcf8tzPpKjiR_-tSClUg0JKLH6fuHiDPt4moV0jUyZKShUJVX2QmNx5WcDgwITvPb8vgxkV29z7Arp5ZcGfjNW8SnawnB9gytl2S2GK-kfgnDe4GsK"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight">وَصْـل</span><span class="text-[11px] text-text-muted font-label-sm leading-tight">المنصة التعليمية للتوظيف</span></div></div></div><div class="px-space-md mb-space-md"><div class="p-space-sm rounded-xl bg-surface-lavender flex items-center justify-between"><span class="font-label-sm text-label-sm text-primary">بوابة المؤسسات التعليمية</span><span class="px-space-xs py-0.5 rounded-full bg-status-verified text-on-primary font-label-sm text-[10px]">موثق</span></div></div><nav class="flex-1 px-space-md space-y-space-xs overflow-y-auto" data-active-classes="bg-primary-container text-on-primary font-label-md shadow-sm"><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="school-dashboard" href="#">نظرة عامة للمدرسة</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="post-job" href="#">نشر وظيفة شاغرة</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="urgent-request" href="#">البدلاء العاجلون</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="parent-hub" href="#">طلبات أولياء الأمور</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="teacher-workspace" href="#">الكادر التدريسي المعتمد</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="teacher-workspace" href="#">التوثيق والشهادات</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="home" href="#">العودة للبوابة العامة</a></nav><div class="px-space-lg pt-space-md"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col"><span class="font-label-md text-label-md text-on-surface">مجمع المناهل التعليمي</span><span class="font-body-sm text-body-sm text-text-muted">المكلا - المكلا</span></div></div></div></aside><div class="pr-72"><header class="fixed top-0 left-0 right-72 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-sm"><div class="px-space-sm py-space-xs rounded-lg bg-surface-container text-on-surface-variant font-label-sm text-label-sm">العام الدراسي 2024 / 2025</div><a class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-colors" data-path="post-job" href="#"><span class="material-symbols-outlined text-[18px]">add_circle</span><span>نشر وظيفة شاغرة</span></a></div><div class="flex items-center gap-space-md"><button class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-sm text-label-sm transition-colors" type="button"><span class="material-symbols-outlined text-[16px]">language</span><span>EN / العربية</span></button><div class="relative flex items-center justify-center"><button class="p-space-xs rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span></button><span class="absolute top-0 end-0 w-2 h-2 rounded-full bg-status-alert ring-2 ring-surface"></span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="dashboard-main-offset w-full pt-16 bg-background min-h-screen px-space-lg py-space-lg"><div class="flex flex-col w-full">
+<!-- Top Progress & Breadcrumb Context Strip -->
+<div class="w-full mb-space-lg flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<nav aria-label="Breadcrumb" class="flex items-center gap-space-xs text-text-muted font-label-sm text-label-sm">
+<a class="hover:text-primary transition-colors flex items-center gap-1" data-path="school-dashboard" href="#">
+<span class="material-symbols-outlined text-[15px]">school</span>
+<span>لوحة تحكم المدرسة</span>
+</a>
+<span class="material-symbols-outlined text-[13px] text-outline-variant">chevron_left</span>
+<a class="hover:text-primary transition-colors" href="#">الوظائف الشاغرة</a>
+<span class="material-symbols-outlined text-[13px] text-outline-variant">chevron_left</span>
+<span class="text-primary font-bold">نشر وظيفة تدريسية جديدة</span>
+</nav>
+<div class="flex items-center gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">نشر وظيفة تدريسية شاغرة</h1>
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-surface-lavender text-primary font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+          مسودة رقم #7042
+        </span>
+</div>
+<p class="font-body-md text-body-md text-text-muted">استقطب نخبة المعلمين المؤهلين والمفحوصين أكاديمياً في المكلا لتغطية الشواغر الفصلية والسنوية بكل موثوقية.</p>
+</div>
+<!-- Quick Form Save / Preview Trigger -->
+<div class="flex items-center gap-space-sm self-start md:self-auto">
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-xl bg-surface-container-high text-on-surface hover:bg-surface-variant font-label-md text-label-md transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">bookmark_border</span>
+<span>حفظ كمسودة</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-xl bg-surface-base text-primary shadow-sm hover:shadow-md font-label-md text-label-md transition-all" id="previewModalBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+<span>معاينة فورية للإعلان</span>
+</button>
+</div>
+</div>
+<!-- Smart Urgent Pathway Highlight Banner (Document UX Requirement Section 3.4 & 5.3) -->
+<div class="w-full mb-space-lg p-space-md md:p-space-lg rounded-2xl bg-gradient-to-l from-amber-500/10 via-surface-lavender to-surface-base shadow-sm relative overflow-hidden">
+<div class="absolute -top-12 -left-12 w-40 h-40 bg-status-urgent/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md relative z-10">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-status-urgent/20 text-status-urgent flex items-center justify-center shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[26px]">bolt</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-status-urgent font-bold">هل الاحتياج عاجل لتغطية حصص اليوم أو الأسبوع الحالي؟</span>
+<span class="px-2 py-0.5 rounded-md bg-status-urgent text-surface-base font-label-sm text-[10px]">استجابة فورية</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-body mt-0.5 max-w-2xl">
+            إذا كنت تواجه غياباً طارئاً لأحد الكوادر وترغب ببديل موثوق خلال 60 دقيقة فقط، استخدم مسار الاستبدال السريع بدلاً من نشر إعلان فصلي مجدول.
+          </p>
+</div>
+</div>
+<a class="inline-flex items-center justify-center gap-space-xs px-space-md py-space-sm rounded-xl bg-status-urgent text-on-primary font-label-md text-label-md hover:brightness-105 shadow-sm transition-all whitespace-nowrap" data-path="urgent-request" href="#">
+<span class="material-symbols-outlined text-[18px]">offline_bolt</span>
+<span>مسار الاستبدال العاجل ⚡</span>
+</a>
+</div>
+</div><div class="w-full mb-space-lg p-space-md rounded-2xl bg-surface-base shadow-sm border-subtle flex flex-col gap-space-sm"><div class="flex items-center justify-between pb-1"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[20px]">timeline</span><span class="font-label-lg text-label-lg text-on-surface font-bold">مسار إعداد الشاغر التدريسي</span></div><div class="flex items-center gap-2"><span class="font-label-sm text-label-sm text-text-muted">نسبة اكتمال النموذج:</span><span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary font-label-sm text-[12px] font-bold">75% مكتمل</span></div></div><div class="w-full h-2 rounded-full bg-surface-container overflow-hidden"><div class="h-full bg-gradient-to-l from-primary to-secondary rounded-full" style="width: 75%;"></div></div><div class="grid grid-cols-2 md:grid-cols-4 gap-space-sm pt-1"><div class="flex items-center gap-2 p-2 rounded-xl bg-surface-lavender text-primary"><div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-[12px]">1</div><div class="flex flex-col"><span class="font-label-sm text-label-sm font-bold">البيانات الأساسية</span><span class="text-[10px] text-text-muted">المسمى والمنهج</span></div><span class="material-symbols-outlined text-[16px] text-status-verified mr-auto">check_circle</span></div><div class="flex items-center gap-2 p-2 rounded-xl bg-surface-lavender text-primary"><div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-[12px]">2</div><div class="flex flex-col"><span class="font-label-sm text-label-sm font-bold">الموقع والبيئة</span><span class="text-[10px] text-text-muted">المقر والتجهيزات</span></div><span class="material-symbols-outlined text-[16px] text-status-verified mr-auto">check_circle</span></div><div class="flex items-center gap-2 p-2 rounded-xl bg-surface-lavender text-primary ring-2 ring-primary/40"><div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-[12px]">3</div><div class="flex flex-col"><span class="font-label-sm text-label-sm font-bold">شروط التوثيق</span><span class="text-[10px] text-primary font-semibold">قيد المراجعة الفورية</span></div><span class="w-2 h-2 rounded-full bg-primary animate-ping mr-auto"></span></div><div class="flex items-center gap-2 p-2 rounded-xl bg-surface-subtle text-text-muted"><div class="w-6 h-6 rounded-full bg-surface-container text-text-muted flex items-center justify-center font-bold text-[12px]">4</div><div class="flex flex-col"><span class="font-label-sm text-label-sm font-semibold">الراتب والحوافز</span><span class="text-[10px] text-text-muted">التعويض المالي</span></div></div></div></div>
+<!-- Main Grid: 8 cols Form + 4 cols Interactive Radar / Preview Sidebar -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT / MAIN FORM COLUMN (8 Cols) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- SECTION 1: Basic Job Details -->
+<section class="p-space-lg rounded-2xl bg-surface-base shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-lavender text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">assignment</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">القسم 1: بيانات الوظيفة الأساسية</h2>
+<span class="font-body-sm text-body-sm text-text-muted">المسمى والمادة والمرحلة المستهدفة بدقة</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary bg-surface-container-high px-space-sm py-1 rounded-full">خطوة 1 من 4</span>
+</div>
+<div class="space-y-space-md">
+<!-- Job Title -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface flex items-center gap-1" for="job-title-input">
+<span>المسمى الوظيفي المعلن</span>
+<span class="text-status-alert">*</span>
+</label>
+<div class="relative">
+<input class="w-full px-space-md py-3 pl-10 rounded-xl bg-surface-subtle text-on-surface font-body-md text-body-md focus:bg-surface-base focus:ring-2 focus:ring-primary/30 outline-none transition-all" id="job-title-input" placeholder="مثال: معلم لغة إنجليزية للصفوف العليا / فيزياء متقدم" type="text" value="معلم أول رياضيات للمرحلة الثانوية"/>
+<span class="material-symbols-outlined absolute left-3 top-3 text-text-muted text-[20px]">edit_note</span>
+</div>
+<span class="font-body-sm text-body-sm text-text-muted">اجعل المسمى واضحاً لجذب المعلمين المعتمدين ذوي الاختصاص الدقيق.</span>
+</div>
+<!-- Academic Field & Subject Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface flex items-center gap-1">
+<span>التخصص الأكاديمي والمادة</span>
+<span class="text-status-alert">*</span>
+</label>
+<select class="w-full px-space-md py-3 rounded-xl bg-surface-subtle text-on-surface font-body-md text-body-md focus:bg-surface-base focus:ring-2 focus:ring-primary/30 outline-none transition-all" id="subject-select">
+<option selected="" value="math">الرياضيات التخصصية والتفاضل</option>
+<option value="physics">الفيزياء التطبيقية والنظرية</option>
+<option value="chemistry">الكيمياء العامة والعضوية</option>
+<option value="arabic">اللغة العربية والأدب</option>
+<option value="english">اللغة الإنجليزية والمحادثة</option>
+<option value="biology">الأحياء والعلوم الحياتية</option>
+<option value="social">الاجتماعيات والجغرافيا</option>
+</select>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface flex items-center gap-1">
+<span>المنهج الدراسي المعتمد</span>
+<span class="text-status-alert">*</span>
+</label>
+<select class="w-full px-space-md py-3 rounded-xl bg-surface-subtle text-on-surface font-body-md text-body-md focus:bg-surface-base focus:ring-2 focus:ring-primary/30 outline-none transition-all">
+<option selected="">المنهج الوزاري اليمني الحديث</option>
+<option>المنهج الوزاري + الإثرائي التخصصي</option>
+<option>المنهج التجريبي المطور للغات</option>
+<option>منهج دولي ثنائي اللغة (Cambridge/IGCSE)</option>
+</select>
+</div>
+</div>
+<!-- Grade Level & Track -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface">المرحلة الدراسية والصفوف</label>
+<div class="flex flex-wrap gap-2">
+<label class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-primary-container text-on-primary font-label-sm text-label-sm cursor-pointer transition-all shadow-sm">
+<input checked="" class="hidden" type="checkbox"/>
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>الثاني الثانوي (علمي)</span>
+</label>
+<label class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-primary-container text-on-primary font-label-sm text-label-sm cursor-pointer transition-all shadow-sm">
+<input checked="" class="hidden" type="checkbox"/>
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>الثالث الثانوي (الوزاري)</span>
+</label>
+<label class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-surface-subtle text-text-body hover:bg-surface-container-high font-label-sm text-label-sm cursor-pointer transition-all">
+<input class="hidden" type="checkbox"/>
+<span class="material-symbols-outlined text-[16px] text-text-muted">add</span>
+<span>الأول الثانوي</span>
+</label>
+<label class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-surface-subtle text-text-body hover:bg-surface-container-high font-label-sm text-label-sm cursor-pointer transition-all">
+<input class="hidden" type="checkbox"/>
+<span class="material-symbols-outlined text-[16px] text-text-muted">add</span>
+<span>القسم الأدبي</span>
+</label>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface">نصاب الحصص الأسبوعي</label>
+<div class="flex items-center gap-3">
+<input class="flex-1 accent-primary h-2 bg-surface-container-high rounded-lg cursor-pointer" id="quotaSlider" max="30" min="6" type="range" value="20"/>
+<span class="px-space-md py-1.5 rounded-lg bg-surface-lavender text-primary font-headline-sm text-headline-sm" id="quotaDisplay">20 حصة</span>
+</div>
+<span class="font-body-sm text-body-sm text-text-muted">المعدل النموذجي في المكلا: 16 - 22 حصة أسبوعياً.</span>
+</div>
+</div>
+<!-- Contract Nature / Work Style Toggles -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<label class="font-label-md text-label-md text-on-surface">طبيعة العقد والدوام</label>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-sm" id="contractTypeGroup">
+<button class="contract-toggle-btn p-3 rounded-xl bg-surface-lavender text-primary ring-2 ring-primary/60 font-label-md text-label-md flex flex-col items-center gap-1 text-center transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[22px]">calendar_today</span>
+<span>دوام كامل فصلي</span>
+<span class="font-body-sm text-[11px] text-text-muted">فصل دراسي محدد</span>
+</button>
+<button class="contract-toggle-btn p-3 rounded-xl bg-surface-subtle text-on-surface-variant hover:bg-surface-container font-label-md text-label-md flex flex-col items-center gap-1 text-center transition-all" type="button">
+<span class="material-symbols-outlined text-[22px]">workspace_premium</span>
+<span>دوام سنوي دائم</span>
+<span class="font-body-sm text-[11px] text-text-muted">عقد تثبيت عام كامل</span>
+</button>
+<button class="contract-toggle-btn p-3 rounded-xl bg-surface-subtle text-on-surface-variant hover:bg-surface-container font-label-md text-label-md flex flex-col items-center gap-1 text-center transition-all" type="button">
+<span class="material-symbols-outlined text-[22px]">schedule</span>
+<span>جزئي بنصاب حصص</span>
+<span class="font-body-sm text-[11px] text-text-muted">أيام محددة بالأسبوع</span>
+</button>
+<button class="contract-toggle-btn p-3 rounded-xl bg-surface-subtle text-on-surface-variant hover:bg-surface-container font-label-md text-label-md flex flex-col items-center gap-1 text-center transition-all" type="button">
+<span class="material-symbols-outlined text-[22px]">more_time</span>
+<span>تعاقد بالساعة</span>
+<span class="font-body-sm text-[11px] text-text-muted">حسب الحصة الفعلية</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: Campus & Work Environment -->
+<section class="p-space-lg rounded-2xl bg-surface-base shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-lavender text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">location_on</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">القسم 2: موقع المدرسة والبيئة التعليمية</h2>
+<span class="font-body-sm text-body-sm text-text-muted">بيانات الفرع، ساعات الدوام، وتجهيزات الفصول</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary bg-surface-container-high px-space-sm py-1 rounded-full">خطوة 2 من 4</span>
+</div>
+<div class="space-y-space-md">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface">فرع المدرسة والمقر</label>
+<select class="w-full px-space-md py-3 rounded-xl bg-surface-subtle text-on-surface font-body-md text-body-md focus:bg-surface-base focus:ring-2 focus:ring-primary/30 outline-none transition-all">
+<option selected="">مجمع المناهل التعليمي - فرع البنين (حي فوه / المتضررين)</option>
+<option>مجمع المناهل التعليمي - فرع البنات (المكلا / حي السلام)</option>
+<option>فرع روكب والديس النموذجي</option>
+</select>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface">فترة الحضور اليومية</label>
+<div class="flex items-center gap-2">
+<div class="flex-1 flex items-center px-3 py-3 rounded-xl bg-surface-subtle text-on-surface font-body-md text-body-md gap-2">
+<span class="material-symbols-outlined text-text-muted text-[18px]">wb_sunny</span>
+<span>الصباحية: 07:30 ص - 01:30 م</span>
+</div>
+<span class="px-space-sm py-2 rounded-xl bg-surface-container text-text-body font-label-sm text-label-sm">حضوري بالمدرسة</span>
+</div>
+</div>
+</div>
+<!-- Campus Environment Facilities Toggles -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface">ميزات بيئة العمل المتاحة للمعلم</label>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-space-sm">
+<label class="flex items-center gap-3 p-3 rounded-xl bg-surface-subtle hover:bg-surface-container-low cursor-pointer transition-all">
+<input checked="" class="accent-primary w-4 h-4 rounded" type="checkbox"/>
+<span class="material-symbols-outlined text-primary text-[20px]">smart_display</span>
+<span class="font-body-md text-body-md text-on-surface">سبورات تفاعلية ذكية</span>
+</label>
+<label class="flex items-center gap-3 p-3 rounded-xl bg-surface-subtle hover:bg-surface-container-low cursor-pointer transition-all">
+<input checked="" class="accent-primary w-4 h-4 rounded" type="checkbox"/>
+<span class="material-symbols-outlined text-primary text-[20px]">science</span>
+<span class="font-body-md text-body-md text-on-surface">معامل حاسوب وفيزياء مجهزة</span>
+</label>
+<label class="flex items-center gap-3 p-3 rounded-xl bg-surface-subtle hover:bg-surface-container-low cursor-pointer transition-all">
+<input checked="" class="accent-primary w-4 h-4 rounded" type="checkbox"/>
+<span class="material-symbols-outlined text-primary text-[20px]">directions_bus</span>
+<span class="font-body-md text-body-md text-on-surface">باصات نقل المعلمين (المكلا)</span>
+</label>
+<label class="flex items-center gap-3 p-3 rounded-xl bg-surface-subtle hover:bg-surface-container-low cursor-pointer transition-all">
+<input checked="" class="accent-primary w-4 h-4 rounded" type="checkbox"/>
+<span class="material-symbols-outlined text-primary text-[20px]">wifi</span>
+<span class="font-body-md text-body-md text-on-surface">إنترنت ألياف ضوئية فائق السرعة</span>
+</label>
+<label class="flex items-center gap-3 p-3 rounded-xl bg-surface-subtle hover:bg-surface-container-low cursor-pointer transition-all">
+<input class="accent-primary w-4 h-4 rounded" type="checkbox"/>
+<span class="material-symbols-outlined text-primary text-[20px]">coffee</span>
+<span class="font-body-md text-body-md text-on-surface">استراحة معلمين مستقلة</span>
+</label>
+<label class="flex items-center gap-3 p-3 rounded-xl bg-surface-subtle hover:bg-surface-container-low cursor-pointer transition-all">
+<input checked="" class="accent-primary w-4 h-4 rounded" type="checkbox"/>
+<span class="material-symbols-outlined text-primary text-[20px]">local_library</span>
+<span class="font-body-md text-body-md text-on-surface">مساعد معمل ومحضر تجارب</span>
+</label>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: Teacher Requirements & Wasl Verification -->
+<section class="p-space-lg rounded-2xl bg-surface-base shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-lavender text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">القسم 3: الشروط والمؤهلات ومتطلبات التوثيق</h2>
+<span class="font-body-sm text-body-sm text-text-muted">ضمان استقطاب الكفاءات المفحوصة والمجازة</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary bg-surface-container-high px-space-sm py-1 rounded-full">خطوة 3 من 4</span>
+</div>
+<div class="space-y-space-md">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface">المؤهل الأكاديمي الأدنى</label>
+<select class="w-full px-space-md py-3 rounded-xl bg-surface-subtle text-on-surface font-body-md text-body-md focus:bg-surface-base focus:ring-2 focus:ring-primary/30 outline-none transition-all">
+<option>بكالوريوس تربية تخصص رياضيات</option>
+<option selected="">بكالوريوس علوم ورياضيات + دبلوم تأهيل تربوي</option>
+<option>ماجستير في المناهج أو الرياضيات التطبيقية</option>
+<option>دبلوم عالي مع خبرة مشهودة لا تقل عن 5 سنوات</option>
+</select>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface">سنوات الخبرة المدرسية المطلوبة</label>
+<select class="w-full px-space-md py-3 rounded-xl bg-surface-subtle text-on-surface font-body-md text-body-md focus:bg-surface-base focus:ring-2 focus:ring-primary/30 outline-none transition-all">
+<option>حديث تخرج متميز (مع معدل تراكمي ممتاز)</option>
+<option>من سنة إلى سنتين خبرة</option>
+<option selected="">من سنتين إلى 5 سنوات في المرحلة الثانوية</option>
+<option>أكثر من 5 سنوات (كادر خبير)</option>
+</select>
+</div>
+</div>
+<!-- Wasl Platform Trust & Verification Prerequisites -->
+<div class="p-space-md rounded-xl bg-surface-lavender/70 flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">shield_with_heart</span>
+<span class="font-label-md text-label-md text-primary font-bold">معايير التحقق المشروطة في منصة «وَصْـل» (Wasl Verification)</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-muted">
+              يتم تصفية المتقدمين تلقائياً بحيث لا تظهر إلا الملفات التي حققت الشروط المحددة أدناه:
+            </p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm pt-1">
+<label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-base shadow-xs cursor-pointer">
+<input checked="" class="accent-primary w-4 h-4 rounded" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">شهادة بكالوريوس موثقة بالمنصة</span>
+</label>
+<label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-base shadow-xs cursor-pointer">
+<input checked="" class="accent-primary w-4 h-4 rounded" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">سيرة ذاتية وسجل جنائي مدقق</span>
+</label>
+<label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-base shadow-xs cursor-pointer">
+<input checked="" class="accent-primary w-4 h-4 rounded" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">فيديو تدريس تجريبي مجاز</span>
+</label>
+</div>
+</div>
+<!-- Flexible Competencies & Skills -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface">مهارات تخصصية تفضيلية</label>
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">
+<span>التمكن من بنوك أسئلة الثانوية الوزارية</span>
+<button class="hover:text-status-alert" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">
+<span>استخدام المنصات الرقمية ورصد الدرجات</span>
+<button class="hover:text-status-alert" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">
+<span>إعداد الطلاب لاختبارات المفاضلة الجامعية</span>
+<button class="hover:text-status-alert" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-subtle text-text-muted hover:text-primary font-label-sm text-label-sm transition-all" type="button">
+<span class="material-symbols-outlined text-[15px]">add</span>
+<span>إضافة مهارة أخرى</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: Compensation & Perks -->
+<section class="p-space-lg rounded-2xl bg-surface-base shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-lavender text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">payments</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">القسم 4: المزايا والتعويض المالي</h2>
+<span class="font-body-sm text-body-sm text-text-muted">الشفافية في الراتب تزيد نسبة إقبال الكفاءات بنسبة 68%</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary bg-surface-container-high px-space-sm py-1 rounded-full">خطوة 4 من 4</span>
+</div>
+<div class="space-y-space-md">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md items-end">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface">نطاق الراتب الشهري المقترح (ريال يمني)</label>
+<div class="flex items-center gap-2">
+<input class="w-full px-space-md py-3 rounded-xl bg-surface-subtle text-on-surface font-body-md text-body-md text-center focus:bg-surface-base outline-none" type="text" value="130,000"/>
+<span class="text-text-muted font-body-sm text-body-sm">إلى</span>
+<input class="w-full px-space-md py-3 rounded-xl bg-surface-subtle text-on-surface font-body-md text-body-md text-center focus:bg-surface-base outline-none" type="text" value="170,000"/>
+</div>
+</div>
+<div class="flex items-center gap-3 p-3 rounded-xl bg-surface-subtle">
+<input class="accent-primary w-4 h-4 rounded" id="negotiableCheck" type="checkbox"/>
+<label class="font-body-md text-body-md text-on-surface cursor-pointer" for="negotiableCheck">
+                أو يحدد الراتب بناءً على نتائج المقابلة واختبار التدريس التجريبي
+              </label>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface">مزايا وحوافز إضافية تقدمها المدرسة</label>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm">
+<label class="flex items-center gap-2 p-3 rounded-xl bg-surface-subtle hover:bg-surface-container-low cursor-pointer transition-all">
+<input checked="" class="accent-primary w-4 h-4 rounded" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface">مكافأة تميز وإنتاجية فصلية</span>
+</label>
+<label class="flex items-center gap-2 p-3 rounded-xl bg-surface-subtle hover:bg-surface-container-low cursor-pointer transition-all">
+<input checked="" class="accent-primary w-4 h-4 rounded" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface">بدل مواصلات شهري إضافي</span>
+</label>
+<label class="flex items-center gap-2 p-3 rounded-xl bg-surface-subtle hover:bg-surface-container-low cursor-pointer transition-all">
+<input checked="" class="accent-primary w-4 h-4 rounded" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface">خصم دراسي بنسبة 50% لأبناء المعلم</span>
+</label>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- RIGHT / SIDEBAR COLUMN (4 Cols): Live Preview & Smart Match Radar -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg lg:sticky lg:top-24">
+<!-- SMART MATCH ESTIMATE CARD -->
+<div class="p-space-lg rounded-2xl bg-surface-base shadow-sm relative overflow-hidden flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">radar</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">رادار المطابقة الفورية</h3>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-status-verified/15 text-status-verified font-label-sm text-[11px] flex items-center gap-1 font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-status-verified animate-ping"></span>
+            نشط بالمكلا
+          </span>
+</div>
+<!-- Radar Stats Visual Counter -->
+<div class="p-space-md rounded-xl bg-gradient-to-br from-surface-lavender to-surface-container-high/50 flex flex-col gap-2">
+<div class="flex items-baseline justify-between">
+<span class="font-body-sm text-body-sm text-text-muted">المعلمون المطابقون لتخصصك حالياً:</span>
+<span class="font-display-hero text-[34px] leading-tight text-primary font-extrabold tracking-tight">28</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-body">
+            معلم رياضيات معتمد ومفحوص الهوية جاهز في نطاق <strong class="text-on-surface">المكلا وفوه والديس</strong> ومتاح للتعاقد الفصلي.
+          </p>
+<!-- Distribution Mini Spark Bar -->
+<div class="pt-2 flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-[10px] text-text-muted">
+<span>جاهزون للتعاقد الفوري (19)</span>
+<span>متاحون جزئياً (9)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-base overflow-hidden flex">
+<div class="h-full bg-primary" style="width: 68%;"></div>
+<div class="h-full bg-secondary-container" style="width: 32%;"></div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-sm text-center">
+<div class="p-space-sm rounded-xl bg-surface-subtle flex flex-col items-center">
+<span class="font-label-sm text-label-sm text-text-muted">متوسط أول تقديم</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold mt-0.5">3.2 ساعات</span>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-subtle flex flex-col items-center">
+<span class="font-label-sm text-label-sm text-text-muted">معدل التوثيق</span>
+<span class="font-headline-sm text-headline-sm text-status-verified font-bold mt-0.5">100% مدقق</span>
+</div>
+</div>
+</div>
+<!-- LIVE PREVIEW CARD (How it will appear to teachers in Wasl Job Index) -->
+<div class="p-space-lg rounded-2xl bg-surface-base shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs text-text-body font-label-md text-label-md">
+<span class="material-symbols-outlined text-primary text-[18px]">devices</span>
+<span>معاينة حية لبطاقة المعلمين</span>
+</div>
+<span class="font-label-sm text-[11px] text-text-muted">كما تظهر في الدليل</span>
+</div>
+<!-- Simulated Card that Teachers will browse -->
+<div class="p-space-md rounded-2xl bg-surface-subtle hover:bg-surface-lavender/40 transition-all flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-base p-1 flex items-center justify-center shadow-xs shrink-0"><img alt="مجمع المناهل التعليمي" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WANGLmo77gluFNEbLuDpjFJxwDtj68HzWH0TvTUQDfPab3W5NnH8ryXhgk5a-77efXUBCD4DW2s6CktXDcJd9nM67dK8WUobF8sw0wj07cvSu6InDBLovyQd7OcWMik7KYE3GRheNcf8tzPpKjiR_-tSClUg0JKLH6fuHiDPt4moV0jUyZKShUJVX2QmNx5WcDgwITvPb8vgxkV29z7Arp5ZcGfjNW8SnawnB9gytl2S2GK-kfgnDe4GsK"/></div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface font-bold">مجمع المناهل التعليمي</span>
+<span class="material-symbols-outlined text-status-verified text-[16px]" title="مدرسة معتمدة رسمياً">verified</span>
+</div>
+<span class="font-body-sm text-[12px] text-text-muted">المكلا - حي فوه المتضررين</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-status-verified/10 text-status-verified font-label-sm text-[11px]">جديد</span>
+</div>
+<div class="flex flex-col gap-1 pt-1">
+<h4 class="font-headline-sm text-[17px] text-primary font-bold leading-snug">معلم أول رياضيات للمرحلة الثانوية</h4>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="px-2 py-0.5 rounded-md bg-surface-base text-text-body font-label-sm text-[11px]">الثاني والثالث الثانوي</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-base text-text-body font-label-sm text-[11px]">دوام كامل فصلي</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-base text-text-body font-label-sm text-[11px]">20 حصة/أسبوع</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2">
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-text-muted">الراتب المتوقع</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">130,000 - 170,000 ر.ي</span>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-primary-container text-on-primary font-label-sm text-label-sm shadow-xs pointer-events-none" type="button">
+              تقديم طلب
+            </button>
+</div>
+</div>
+<div class="flex items-center gap-2 text-text-muted font-body-sm text-body-sm pt-1">
+<span class="material-symbols-outlined text-[16px] text-status-verified">check_circle</span>
+<span>يتضمن الإعلان إمكانية مشاهدة المعلم لموقع المدرسة والبدلات.</span>
+</div>
+</div>
+<!-- WASL TRUST GUARANTEES -->
+<div class="p-space-lg rounded-2xl bg-surface-base shadow-sm flex flex-col gap-space-sm">
+<h4 class="font-label-lg text-label-lg text-on-surface font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">verified</span>
+<span>ضمانات «وَصْـل» للتوظيف المدرسي</span>
+</h4>
+<ul class="space-y-space-sm text-text-body font-body-sm text-body-sm">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-status-verified text-[18px] shrink-0 mt-0.5">check</span>
+<span>تصفية وفرز السير الذاتية آلياً وترتيب المتقدمين حسب درجة التوافق العلمي.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-status-verified text-[18px] shrink-0 mt-0.5">check</span>
+<span>الاطلاع على تقييمات المدارس السابقة ومقاطع الفيديو التجريبية للشرح الصفي.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-status-verified text-[18px] shrink-0 mt-0.5">check</span>
+<span>سرية تامة لحساب المدرسة وبيانات التواصل حتى إجازة المرشح للمقابلة.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- STICKY ACTION FOOTER BAR -->
+<div class="mt-space-xl p-space-md md:p-space-lg rounded-2xl bg-surface-base shadow-lg flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-status-verified/15 text-status-verified flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">policy</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">سياسة النشر والشفافية في منصة وَصْـل</span>
+<span class="font-body-sm text-body-sm text-text-muted">تخضع جميع الإعلانات للمراجعة السريعة لضمان حقوق الكوادر التدريسية والاعتماد الأكاديمي.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="px-space-md py-3 rounded-xl bg-surface-subtle text-text-body hover:bg-surface-container font-label-md text-label-md transition-all" type="button">
+        حفظ كمسودة
+      </button>
+<button class="px-space-md py-3 rounded-xl bg-surface-lavender text-primary hover:bg-primary-fixed font-label-md text-label-md transition-all" id="previewModalBtn2" type="button">
+        معاينة كمعلم
+      </button>
+<button class="inline-flex items-center gap-2 px-space-lg py-3 rounded-xl bg-primary hover:bg-secondary text-on-primary font-label-lg text-label-lg shadow-md hover:shadow-xl transition-all" id="publishJobBtn" type="button"><span class="material-symbols-outlined text-[22px]">rocket_launch</span><span class="font-bold">اعتماد ونشر الإعلان الوظيفي فوراً 🚀</span></button>
+</div>
+</div>
+<!-- INTERACTIVE MODAL: Teacher View Preview (Hidden by default) -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm p-4 hidden" id="previewModal">
+<div class="w-full max-w-2xl bg-surface-base rounded-3xl shadow-2xl p-space-lg flex flex-col gap-space-md max-h-[90vh] overflow-y-auto">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-2">
+<img alt="شعار وَصْـل" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WANGLmo77gluFNEbLuDpjFJxwDtj68HzWH0TvTUQDfPab3W5NnH8ryXhgk5a-77efXUBCD4DW2s6CktXDcJd9nM67dK8WUobF8sw0wj07cvSu6InDBLovyQd7OcWMik7KYE3GRheNcf8tzPpKjiR_-tSClUg0JKLH6fuHiDPt4moV0jUyZKShUJVX2QmNx5WcDgwITvPb8vgxkV29z7Arp5ZcGfjNW8SnawnB9gytl2S2GK-kfgnDe4GsK"/>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">معاينة بطاقة الإعلان الوظيفي</h3>
+</div>
+<button class="p-1 rounded-full text-text-muted hover:text-on-surface hover:bg-surface-container" id="closeModalBtn" type="button">
+<span class="material-symbols-outlined text-[22px]">close</span>
+</button>
+</div>
+<div class="p-space-lg rounded-2xl bg-surface-subtle flex flex-col gap-space-md">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-14 h-14 rounded-2xl bg-surface-base p-2 shadow-xs flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[32px]">apartment</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">مجمع المناهل التعليمي</h4>
+<span class="material-symbols-outlined text-status-verified text-[18px]">verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-muted">المكلا - حي فوه المتضررين (باصات المعلمين متوفرة)</p>
+</div>
+</div>
+<span class="px-3 py-1 rounded-full bg-status-verified/15 text-status-verified font-label-sm text-label-sm font-bold">شواغر فورية</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-md text-headline-md text-primary" id="modalPreviewTitle">معلم أول رياضيات للمرحلة الثانوية</h3>
+<p class="font-body-md text-body-md text-text-body">
+            مطلوب معلم رياضيات متمرس للثاني والثالث الثانوي للعام 2024 / 2025. المنهج الوزاري اليمني التخصصي، نصاب 20 حصة أسبوعياً مع سبورات تفاعلية ومكافآت فصلية.
+          </p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-2 pt-2 text-center">
+<div class="p-2.5 rounded-xl bg-surface-base">
+<span class="font-label-sm text-text-muted block text-[11px]">الراتب الشهري</span>
+<span class="font-label-md text-on-surface font-bold">130,000 - 170,000</span>
+</div>
+<div class="p-2.5 rounded-xl bg-surface-base">
+<span class="font-label-sm text-text-muted block text-[11px]">طبيعة الدوام</span>
+<span class="font-label-md text-on-surface font-bold">كامل فصلي</span>
+</div>
+<div class="p-2.5 rounded-xl bg-surface-base">
+<span class="font-label-sm text-text-muted block text-[11px]">ساعات العمل</span>
+<span class="font-label-md text-on-surface font-bold">07:30 ص - 01:30 م</span>
+</div>
+<div class="p-2.5 rounded-xl bg-surface-base">
+<span class="font-label-sm text-text-muted block text-[11px]">الخبرة المطلوبة</span>
+<span class="font-label-md text-on-surface font-bold">2 - 5 سنوات</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-2">
+<button class="px-space-md py-2.5 rounded-xl bg-surface-container-high text-on-surface font-label-md text-label-md" id="closeModalBtn2" type="button">
+          إغلاق المعاينة
+        </button>
+<button class="px-space-lg py-2.5 rounded-xl bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">publish</span>
+<span>اعتماد ونشر الآن</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Inline Micro-Interactions Script -->
+<script>
+    (function initJobPostingInteractions() {
+      // 1. Quota Slider Interaction
+      const slider = document.getElementById('quotaSlider');
+      const display = document.getElementById('quotaDisplay');
+      if (slider && display) {
+        slider.addEventListener('input', (e) => {
+          display.textContent = e.target.value + ' حصة';
+        });
+      }
+
+      // 2. Contract Type Selection Toggle
+      const buttons = document.querySelectorAll('.contract-toggle-btn');
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          buttons.forEach(b => {
+            b.classList.remove('bg-surface-lavender', 'text-primary', 'ring-2', 'ring-primary/60');
+            b.classList.add('bg-surface-subtle', 'text-on-surface-variant');
+          });
+          btn.classList.remove('bg-surface-subtle', 'text-on-surface-variant');
+          btn.classList.add('bg-surface-lavender', 'text-primary', 'ring-2', 'ring-primary/60');
+        });
+      });
+
+      // 3. Modal open / close logic
+      const modal = document.getElementById('previewModal');
+      const openBtn1 = document.getElementById('previewModalBtn');
+      const openBtn2 = document.getElementById('previewModalBtn2');
+      const closeBtn1 = document.getElementById('closeModalBtn');
+      const closeBtn2 = document.getElementById('closeModalBtn2');
+      const titleInput = document.getElementById('job-title-input');
+      const modalTitle = document.getElementById('modalPreviewTitle');
+
+      function openModal() {
+        if (titleInput && modalTitle && titleInput.value.trim() !== '') {
+          modalTitle.textContent = titleInput.value;
+        }
+        modal.classList.remove('hidden');
+      }
+
+      function closeModal() {
+        modal.classList.add('hidden');
+      }
+
+      if (openBtn1) openBtn1.addEventListener('click', openModal);
+      if (openBtn2) openBtn2.addEventListener('click', openModal);
+      if (closeBtn1) closeBtn1.addEventListener('click', closeModal);
+      if (closeBtn2) closeBtn2.addEventListener('click', closeModal);
+
+      // Close modal on outside click
+      if (modal) {
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) closeModal();
+        });
+      }
+
+      // 4. Publish Job Feedback Alert
+      const publishBtn = document.getElementById('publishJobBtn');
+      if (publishBtn) {
+        publishBtn.addEventListener('click', () => {
+          const originalHTML = publishBtn.innerHTML;
+          publishBtn.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">refresh</span><span>جارٍ نشر الوظيفة في شبكة المكلا...</span>';
+          publishBtn.classList.add('opacity-90', 'pointer-events-none');
+          setTimeout(() => {
+            publishBtn.innerHTML = '<span class="material-symbols-outlined text-[20px]">check_circle</span><span>تم النشر بنجاح وإشعار 28 معلماً! 🎉</span>';
+            publishBtn.classList.remove('bg-primary');
+            publishBtn.classList.add('bg-status-verified');
+          }, 1100);
+        });
+      }
+    })();
+  </script>
+</div></main></div>
