@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>نشر وظيفة — منهل</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main id="main" class="section section--tight">
+    <div class="container" style="max-width:880px">
+      <h1 data-i18n="job.title">نشر وظيفة</h1>
+      <p class="muted" data-i18n="job.sub">أضف تفاصيل الدور، وسنعرضه على المعلمين المناسبين.</p>
+
+      <div class="card card--pad-lg mt-lg">
+        <form data-demo-form data-redirect="dashboard-school.html" class="stack" style="gap:16px">
+          <div class="form-grid">
+            <div class="field field--full">
+              <label class="field__label" for="j-role" data-i18n="job.role">المسمى الوظيفي</label>
+              <input class="input" id="j-role" required placeholder="معلمة لغة إنجليزية — المرحلة المتوسطة" />
+            </div>
+            <div class="field">
+              <label class="field__label" for="j-subject" data-i18n="search.subject">المادة</label>
+              <select class="select" id="j-subject" required></select>
+            </div>
+            <div class="field">
+              <label class="field__label" for="j-grade" data-i18n="search.grade">الصف</label>
+              <select class="select" id="j-grade" required></select>
+            </div>
+            <div class="field">
+              <label class="field__label" for="j-type" data-i18n="job.type">نوع الدوام</label>
+              <select class="select" id="j-type">
+                <option value="full" data-i18n="job.full">دوام كامل</option>
+                <option value="part" data-i18n="job.part">دوام جزئي</option>
+              </select>
+            </div>
+            <div class="field">
+              <label class="field__label" for="j-district" data-i18n="search.district">المنطقة</label>
+              <select class="select" id="j-district" required></select>
+            </div>
+            <div class="field">
+              <label class="field__label" for="j-salary">الراتب التقريبي <span class="muted">(اختياري)</span></label>
+              <input class="input" id="j-salary" placeholder="مثال: 120,000 ر.ي / شهريًا" />
+            </div>
+            <div class="field">
+              <label class="field__label" for="j-deadline" data-i18n="common.date">آخر موعد للتقديم</label>
+              <input class="input" id="j-deadline" type="date" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="j-desc" data-i18n="job.desc">وصف الوظيفة</label>
+            <textarea class="textarea" id="j-desc" rows="4" placeholder="المهام، عدد الحصص، أيام الدوام…"></textarea>
+          </div>
+          <div class="field">
+            <label class="field__label" for="j-reqs" data-i18n="job.reqs">المتطلبات</label>
+            <textarea class="textarea" id="j-reqs" rows="4" placeholder="المؤهل، سنوات الخبرة، المهارات…"></textarea>
+          </div>
+
+          <div class="alert alert--info">
+            <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 16v-5M12 8h.01"/></svg>
+            <span>سيظهر الإعلان لجميع المعلمين المطابقين، وستستقبل الطلبات في لوحة المدرسة.</span>
+          </div>
+
+          <div class="row row--between row--wrap">
+            <a class="btn btn--ghost" href="dashboard-school.html" data-i18n="common.cancel">إلغاء</a>
+            <button class="btn btn--lg" type="submit" data-i18n="job.publish">نشر الوظيفة</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script>
+    (function () {
+      function fill() {
+        const lang = document.documentElement.lang === "en" ? "en" : "ar";
+        const s = document.getElementById("j-subject");
+        const g = document.getElementById("j-grade");
+        const d = document.getElementById("j-district");
+        s.innerHTML = SUBJECTS.map((x) => `<option value="${x.id}">${x[lang]}</option>`).join("");
+        g.innerHTML = GRADES.map((x) => `<option value="${x.id}">${x[lang]}</option>`).join("");
+        d.innerHTML = DISTRICTS.map((x) => `<option value="${x.id}">${x[lang]}</option>`).join("");
+      }
+      fill();
+      document.addEventListener("manhal:lang", fill);
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>لوحة المدرسة — منهل</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <div class="dash" id="dash-app" data-role="school">
+    <aside class="dash__side">
+      <div class="dash__profile">
+        <div class="avatar">ن</div>
+        <div>
+          <strong data-dash-name>مدرسة النهضة الأهلية</strong>
+          <span data-dash-role>مدرسة</span>
+        </div>
+      </div>
+      <nav class="dash__nav">
+        <a class="dash__link is-active" href="#" data-section="overview">
+          <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          <span data-i18n="dash.overview">لوحة التحكم</span>
+        </a>
+        <a class="dash__link" href="search.html">
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          <span data-i18n="dash.search">البحث عن معلم</span>
+        </a>
+        <a class="dash__link" href="#" data-section="jobs">
+          <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+          <span data-i18n="dash.jobs">الوظائف</span>
+        </a>
+        <a class="dash__link" href="#" data-section="requests">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+          <span data-i18n="dash.requests">الطلبات</span>
+        </a>
+        <a class="dash__link" href="#" data-section="saved">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M20.8 5.6a5.5 5.5 0 0 0-7.8 0L12 6.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg>
+          <span data-i18n="dash.saved">المحفوظون</span>
+        </a>
+        <a class="dash__link" href="#" data-section="notifications">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+          <span data-i18n="dash.notifications">الإشعارات</span>
+        </a>
+        <a class="dash__link" href="#" data-section="settings">
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
+          <span data-i18n="dash.settings">الإعدادات</span>
+        </a>
+      </nav>
+    </aside>
+
+    <div class="dash__main">
+      <!-- OVERVIEW -->
+      <section data-panel="overview">
+        <div class="row row--between row--wrap" style="gap:12px">
+          <div>
+            <h1 style="font-size:24px;margin:0"><span data-i18n="dash.welcome">أهلًا بك</span>، <span data-dash-name>مدرسة النهضة الأهلية</span> 👋</h1>
+            <p class="small muted" style="margin:4px 0 0" data-i18n="dash.suggestedNote">التوصيات مبنية على احتياجاتك أو بحثك الأخير، وتتحسن مع استخدامك للمنصة.</p>
+          </div>
+          <a class="btn btn--ghost btn--sm" href="#" data-section="notifications">
+            <svg class="icon icon--sm" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/></svg>
+            <span data-i18n="dash.notifications">الإشعارات</span>
+            <span class="chip chip--urgent">2</span>
+          </a>
+        </div>
+
+        <div class="grid grid-3 mt-lg" style="gap:14px">
+          <a class="action-tile" href="search.html">
+            <div class="action-tile__icon">
+              <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+            </div>
+            <strong data-i18n="dash.search">البحث عن معلم</strong>
+            <small data-i18n="search.sub">حدد المادة والصف والمنطقة ونمط التدريس، وسنرتب لك النتائج حسب المطابقة.</small>
+          </a>
+          <a class="action-tile action-tile--urgent" href="urgent.html">
+            <div class="action-tile__icon">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M13 2 3 14h8l-1 8 10-12h-8l1-8z"/></svg>
+            </div>
+            <strong data-i18n="dash.urgent">طلب عاجل</strong>
+            <small data-i18n="urgent.desc">أرسل طلبًا سريعًا بالمادة والصف والمنطقة والوقت، ويصل إشعار فوري للمعلمين المطابقين.</small>
+          </a>
+          <a class="action-tile" href="post-job.html">
+            <div class="action-tile__icon">
+              <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+            </div>
+            <strong data-i18n="dash.postJob">انشر وظيفة</strong>
+            <small data-i18n="job.sub">أضف تفاصيل الدور، وسنعرضه على المعلمين المناسبين.</small>
+          </a>
+        </div>
+
+        <div class="grid grid-4 mt-lg" style="gap:14px">
+          <div class="kpi"><div class="kpi__value">4</div><div class="kpi__label" data-i18n="dash.requests">الطلبات</div></div>
+          <div class="kpi"><div class="kpi__value">12</div><div class="kpi__label" data-i18n="dash.contactRequests">طلبات التواصل</div></div>
+          <div class="kpi"><div class="kpi__value">6</div><div class="kpi__label" data-i18n="dash.saved">المحفوظون</div></div>
+          <div class="kpi"><div class="kpi__value">2</div><div class="kpi__label" data-i18n="dash.jobs">الوظائف</div></div>
+        </div>
+
+        <div class="card mt-lg" style="padding:0;overflow:hidden">
+          <div class="row row--between" style="padding:18px 20px">
+            <h2 style="font-size:16px;margin:0" data-i18n="dash.recent">طلباتك الأخيرة</h2>
+            <a class="small" href="#" data-section="requests" data-i18n="common.viewAll">عرض الكل</a>
+          </div>
+          <div class="table-wrap" style="border:0;border-radius:0">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th data-i18n="common.details">التفاصيل</th>
+                  <th data-i18n="common.status">الحالة</th>
+                  <th data-i18n="common.date">التاريخ</th>
+                  <th data-i18n="common.actions">الإجراءات</th>
+                </tr>
+              </thead>
+              <tbody id="recent-rows"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <h2 class="mt-lg" style="font-size:16px" data-i18n="dash.suggested">معلمون مقترحون</h2>
+        <div class="grid grid-2 mt-sm" id="suggested-list" style="gap:14px"></div>
+      </section>
+
+      <!-- REQUESTS -->
+      <section data-panel="requests" class="hidden">
+        <h1 style="font-size:22px" data-i18n="dash.requests">الطلبات</h1>
+        <div class="card" style="padding:0;overflow:hidden">
+          <div class="table-wrap" style="border:0;border-radius:0">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th data-i18n="common.details">التفاصيل</th>
+                  <th>#</th>
+                  <th data-i18n="common.status">الحالة</th>
+                  <th data-i18n="common.date">التاريخ</th>
+                  <th data-i18n="common.actions">الإجراءات</th>
+                </tr>
+              </thead>
+              <tbody id="all-rows"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- JOBS -->
+      <section data-panel="jobs" class="hidden">
+        <div class="row row--between">
+          <h1 style="font-size:22px;margin:0" data-i18n="dash.jobs">الوظائف</h1>
+          <a class="btn btn--sm" href="post-job.html" data-i18n="dash.postJob">انشر وظيفة</a>
+        </div>
+        <div class="card mt-md" style="padding:0;overflow:hidden">
+          <div class="table-wrap" style="border:0;border-radius:0">
+            <table class="table">
+              <thead><tr><th data-i18n="job.role">المسمى الوظيفي</th><th data-i18n="common.status">الحالة</th><th data-i18n="common.date">التاريخ</th><th>—</th></tr></thead>
+              <tbody>
+                <tr><td>معلمة لغة إنجليزية — متوسط</td><td><span class="chip chip--lavender">قيد المراجعة</span></td><td>2026-11-04</td><td><a class="small" href="#">إدارة</a></td></tr>
+                <tr><td>معلم رياضيات — ثانوي</td><td><span class="chip chip--verified">منشورة</span></td><td>2026-10-21</td><td><a class="small" href="#">إدارة</a></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- SAVED -->
+      <section data-panel="saved" class="hidden">
+        <h1 style="font-size:22px" data-i18n="dash.saved">المحفوظون</h1>
+        <div class="stack" id="saved-list" style="gap:14px"></div>
+      </section>
+
+      <!-- NOTIFICATIONS -->
+      <section data-panel="notifications" class="hidden">
+        <h1 style="font-size:22px" data-i18n="dash.notifications">الإشعارات</h1>
+        <div class="stack" id="notif-list" style="gap:10px"></div>
+      </section>
+
+      <!-- SETTINGS -->
+      <section data-panel="settings" class="hidden">
+        <h1 style="font-size:22px" data-i18n="dash.settings">الإعدادات</h1>
+        <div class="card">
+          <h3 style="font-size:15px" data-i18n="common.language">اللغة</h3>
+          <div class="row" style="gap:8px">
+            <button class="btn btn--ghost btn--sm" type="button" data-set-lang="ar">العربية</button>
+            <button class="btn btn--ghost btn--sm" type="button" data-set-lang="en">English</button>
+          </div>
+          <hr class="divider" />
+          <h3 style="font-size:15px" data-i18n="dash.notifications">الإشعارات</h3>
+          <label class="checkbox"><input type="checkbox" checked /><span>إشعارات داخل المنصة</span></label>
+          <label class="checkbox mt-sm"><input type="checkbox" checked /><span>إشعارات البريد الإلكتروني</span></label>
+          <label class="checkbox mt-sm"><input type="checkbox" /><span>إشعارات الجوال</span></label>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script>
+    (function () {
+      const statusChip = {
+        open: ["chip--urgent", "مفتوح"],
+        review: ["chip--lavender", "قيد المراجعة"],
+        accepted: ["chip--verified", "مقبول"],
+        closed: ["", "مغلق"]
+      };
+      function render() {
+        const rows = (id, list) => {
+          const el = document.getElementById(id);
+          if (!el) return;
+          el.innerHTML = list
+            .map(function (r) {
+              const s = statusChip[r.status] || ["", r.status];
+              return `<tr>
+                <td>
+                  <div style="font-weight:700">${r.title}</div>
+                  <div class="tiny muted">${r.id} · ${r.applicants} ${Manhal.t("common.results")}</div>
+                </td>
+                <td><span class="chip ${s[0]}">${s[1]}</span></td>
+                <td class="nowrap">${r.date}</td>
+                <td><a class="small" href="#">${Manhal.t("common.details")}</a></td>
+              </tr>`;
+            })
+            .join("");
+        };
+        const recent = document.getElementById("recent-rows");
+        if (recent && !recent.dataset.done) {
+          recent.innerHTML = REQUESTS.slice(0, 3)
+            .map(function (r) {
+              const s = statusChip[r.status] || ["", r.status];
+              return `<tr><td>${r.title}</td><td><span class="chip ${s[0]}">${s[1]}</span></td><td class="nowrap">${r.date}</td><td><a class="small" href="#">${Manhal.t("common.details")}</a></td></tr>`;
+            })
+            .join("");
+        }
+        const all = document.getElementById("all-rows");
+        if (all) {
+          all.innerHTML = REQUESTS.map(function (r) {
+            const s = statusChip[r.status] || ["", r.status];
+            return `<tr><td>${r.title}</td><td class="tiny muted">${r.id}</td><td><span class="chip ${s[0]}">${s[1]}</span></td><td class="nowrap">${r.date}</td><td><a class="small" href="#">${Manhal.t("common.details")}</a></td></tr>`;
+          }).join("");
+        }
+        const sug = document.getElementById("suggested-list");
+        if (sug) sug.innerHTML = TEACHERS.slice(0, 2).map((x) => Manhal.teacherCard(x, { showMatch: true })).join("");
+        const saved = document.getElementById("saved-list");
+        if (saved) {
+          const ids = Manhal.getSaved();
+          saved.innerHTML = ids.length
+            ? ids.map((id) => TEACHERS.find((x) => x.id === id)).filter(Boolean).map((x) => Manhal.teacherCard(x)).join("")
+            : Manhal.emptyState("heart", Manhal.t("common.empty"), Manhal.t("search.noResultsDesc"), `<a class="btn" href="search.html">${Manhal.t("common.searchTeacher")}</a>`);
+        }
+      }
+      document.querySelectorAll("[data-section]").forEach(function (l) {
+        l.addEventListener("click", function () { setTimeout(render, 0); });
+      });
+      document.querySelectorAll("[data-set-lang]").forEach(function (b) {
+        b.addEventListener("click", function () {
+          localStorage.setItem("manhal.lang", b.getAttribute("data-set-lang"));
+          location.reload();
+        });
+      });
+      render();
+      document.addEventListener("manhal:re-render", render);
+      document.addEventListener("manhal:lang", render);
+    })();
+  </script>
+</body>
+</html>

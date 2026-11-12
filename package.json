@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "node js/test_suite.js"
+    "test": "node js/test_suite.js",
+    "sync": "node js/sync_views.js"
   },
   "keywords": [
     "education",

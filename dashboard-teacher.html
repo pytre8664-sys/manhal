@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>لوحة المعلم — منهل</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <div class="dash" id="dash-app" data-role="teacher">
+    <aside class="dash__side">
+      <div class="dash__profile">
+        <div class="avatar">س</div>
+        <div>
+          <strong data-dash-name>أ. سارة بامطرف</strong>
+          <span data-dash-role>معلم</span>
+        </div>
+      </div>
+      <nav class="dash__nav">
+        <a class="dash__link is-active" href="#" data-section="overview">
+          <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          <span data-i18n="dash.overview">لوحة التحكم</span>
+        </a>
+        <a class="dash__link" href="#" data-section="requests">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <span data-i18n="dash.contactRequests">طلبات التواصل</span>
+        </a>
+        <a class="dash__link" href="#" data-section="urgent">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M13 2 3 14h8l-1 8 10-12h-8l1-8z"/></svg>
+          <span data-i18n="dash.urgentOpps">الطلبات العاجلة</span>
+        </a>
+        <a class="dash__link" href="#" data-section="availability">
+          <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          <span data-i18n="dash.availability">جدول التوفر</span>
+        </a>
+        <a class="dash__link" href="#" data-section="profile">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span data-i18n="dash.profile">الملف المهني</span>
+        </a>
+        <a class="dash__link" href="#" data-section="notifications">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+          <span data-i18n="dash.notifications">الإشعارات</span>
+        </a>
+        <a class="dash__link" href="#" data-section="settings">
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
+          <span data-i18n="dash.settings">الإعدادات</span>
+        </a>
+      </nav>
+    </aside>
+
+    <div class="dash__main">
+      <section data-panel="overview">
+        <h1 style="font-size:24px;margin:0"><span data-i18n="dash.welcome">أهلًا بك</span>، <span data-dash-name>أ. سارة بامطرف</span> 👋</h1>
+        <p class="small muted" data-i18n="teachers.desc">أنشئ ملفًا مهنيًا مجانيًا، اعرض مؤهلاتك وخبرتك وموادك، وحدّد جدول توفرك للمدارس والدروس الخصوصية.</p>
+
+        <div class="card mt-lg">
+          <div class="row row--between">
+            <strong class="small" data-i18n="dash.completeness">اكتمال الملف</strong>
+            <span class="small muted">78% <span data-i18n="dash.complete">مكتمل</span></span>
+          </div>
+          <div class="progress mt-sm"><div class="progress__bar" data-progress="78"></div></div>
+          <div class="stack mt-md" style="gap:8px">
+            <div class="row" style="gap:8px"><span class="chip chip--verified"><svg class="icon" viewBox="0 0 24 24"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></span><span class="small" data-i18n="trust.v1">توثيق الهوية</span></div>
+            <div class="row" style="gap:8px"><span class="chip chip--verified"><svg class="icon" viewBox="0 0 24 24"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></span><span class="small" data-i18n="trust.v2">توثيق المؤهل</span></div>
+            <div class="row" style="gap:8px"><span class="chip chip--outline"><svg class="icon" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg></span><span class="small muted" data-i18n="trust.v3">توثيق الخبرة</span></div>
+          </div>
+          <a class="btn btn--sm mt-md" href="#" data-section="profile" data-i18n="dash.completeProfile">أكمل ملفك</a>
+        </div>
+
+        <div class="grid grid-3 mt-lg" style="gap:14px">
+          <div class="kpi"><div class="kpi__value">3</div><div class="kpi__label" data-i18n="dash.contactRequests">طلبات التواصل</div></div>
+          <div class="kpi"><div class="kpi__value">2</div><div class="kpi__label" data-i18n="dash.urgentOpps">الطلبات العاجلة</div></div>
+          <div class="kpi"><div class="kpi__value">4.9</div><div class="kpi__label" data-i18n="common.rating">التقييم</div></div>
+        </div>
+
+        <div class="card mt-lg" style="padding:0;overflow:hidden">
+          <div class="row row--between" style="padding:18px 20px">
+            <h2 style="font-size:16px;margin:0" data-i18n="dash.contactRequests">طلبات التواصل</h2>
+            <a class="small" href="#" data-section="requests" data-i18n="common.viewAll">عرض الكل</a>
+          </div>
+          <div class="table-wrap" style="border:0;border-radius:0">
+            <table class="table">
+              <thead><tr><th>#</th><th data-i18n="common.status">الحالة</th><th data-i18n="common.date">التاريخ</th><th></th></tr></thead>
+              <tbody id="teacher-rows"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <h2 class="mt-lg" style="font-size:16px" data-i18n="dash.urgentOpps">الطلبات العاجلة</h2>
+        <div class="stack mt-sm" id="urgent-list" style="gap:12px"></div>
+      </section>
+
+      <section data-panel="requests" class="hidden">
+        <h1 style="font-size:22px" data-i18n="dash.contactRequests">طلبات التواصل</h1>
+        <div class="stack" id="request-cards" style="gap:14px"></div>
+      </section>
+
+      <section data-panel="urgent" class="hidden">
+        <h1 style="font-size:22px" data-i18n="dash.urgentOpps">الطلبات العاجلة</h1>
+        <div class="stack" id="urgent-full" style="gap:12px"></div>
+      </section>
+
+      <section data-panel="availability" class="hidden">
+        <h1 style="font-size:22px" data-i18n="dash.availability">جدول التوفر</h1>
+        <p class="small muted">حدّد أوقات توفرك بشكل منفصل للمدارس والدروس الخصوصية.</p>
+        <div class="card">
+          <div class="stack" style="gap:10px" id="avail-grid"></div>
+          <div class="row mt-md" style="gap:8px">
+            <button class="btn btn--sm" type="button" onclick="Manhal.toast('تم حفظ جدول التوفر', 'success')">حفظ</button>
+            <button class="btn btn--ghost btn--sm" type="button">إعادة تعيين</button>
+          </div>
+        </div>
+      </section>
+
+      <section data-panel="profile" class="hidden">
+        <h1 style="font-size:22px" data-i18n="dash.profile">الملف المهني</h1>
+        <div class="card">
+          <div class="form-grid">
+            <div class="field"><label class="field__label" data-i18n="auth.name">الاسم الكامل</label><input class="input" value="أ. سارة بامطرف" /></div>
+            <div class="field"><label class="field__label" data-i18n="common.subject">المادة</label><input class="input" value="رياضيات" /></div>
+            <div class="field"><label class="field__label" data-i18n="common.grade">الصف</label><input class="input" value="متوسط / ثانوي" /></div>
+            <div class="field"><label class="field__label" data-i18n="common.district">المنطقة</label><input class="input" value="المكلا" /></div>
+            <div class="field field--full"><label class="field__label" data-i18n="teacher.about">نبذة</label><textarea class="textarea" rows="4">معلمة رياضيات بخبرة تسع سنوات في المرحلة المتوسطة والثانوية…</textarea></div>
+          </div>
+          <div class="row row--between mt-md">
+            <a class="btn btn--ghost btn--sm" href="teacher.html?id=t1" target="_blank" data-i18n="common.viewProfile">عرض الملف</a>
+            <button class="btn btn--sm" type="button" onclick="Manhal.toast('تم حفظ الملف', 'success')" data-i18n="common.save">حفظ</button>
+          </div>
+        </div>
+      </section>
+
+      <section data-panel="notifications" class="hidden">
+        <h1 style="font-size:22px" data-i18n="dash.notifications">الإشعارات</h1>
+        <div class="stack" id="notif-list" style="gap:10px"></div>
+      </section>
+
+      <section data-panel="settings" class="hidden">
+        <h1 style="font-size:22px" data-i18n="dash.settings">الإعدادات</h1>
+        <div class="card">
+          <h3 style="font-size:15px" data-i18n="common.language">اللغة</h3>
+          <div class="row" style="gap:8px">
+            <button class="btn btn--ghost btn--sm" type="button" data-set-lang="ar">العربية</button>
+            <button class="btn btn--ghost btn--sm" type="button" data-set-lang="en">English</button>
+          </div>
+          <hr class="divider" />
+          <label class="checkbox"><input type="checkbox" checked /><span>إشعارات داخل المنصة</span></label>
+          <label class="checkbox mt-sm"><input type="checkbox" checked /><span>إشعارات البريد الإلكتروني</span></label>
+          <label class="checkbox mt-sm"><input type="checkbox" /><span>إشعارات الجوال</span></label>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script>
+    (function () {
+      const chipMap = {
+        pending: ["chip--urgent", "بانتظار الرد"],
+        accepted: ["chip--verified", "مقبول"],
+        declined: ["", "مرفوض"]
+      };
+      const URGENT = [
+        { school: "مدرسة الأمل الأهلية", subject: "math", grade: "secondary", district: "mukalla", when: "غدًا صباحًا" },
+        { school: "ثانوية الشحر للبنين", subject: "physics", grade: "secondary", district: "shihr", when: "هذا الأسبوع" }
+      ];
+      function urgentCard(u) {
+        return `<div class="card" style="display:flex;gap:14px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap">
+          <div>
+            <div class="row" style="gap:8px"><span class="chip chip--urgent">${Manhal.t("urgent.badge")}</span><strong class="small">${u.when}</strong></div>
+            <h4 style="margin:8px 0 2px">${u.school}</h4>
+            <p class="small muted" style="margin:0">${Manhal.tr(Manhal.SUBJ(u.subject))} · ${Manhal.tr(Manhal.GRADE(u.grade))} · ${Manhal.tr(Manhal.DIST(u.district))}</p>
+          </div>
+          <button class="btn btn--sm" type="button" onclick="Manhal.toast('تم إرسال طلب التقديم', 'success')">${Manhal.t("common.apply")}</button>
+        </div>`;
+      }
+      function render() {
+        const rows = document.getElementById("teacher-rows");
+        if (rows) {
+          rows.innerHTML = TEACHER_REQUESTS.map(function (r) {
+            const c = chipMap[r.status];
+            return `<tr><td>${r.from}</td><td><span class="chip ${c[0]}">${c[1]}</span></td><td class="nowrap">${r.date}</td><td class="nowrap"><a class="small" href="#">${Manhal.t("common.details")}</a></td></tr>`;
+          }).join("");
+        }
+        const cards = document.getElementById("request-cards");
+        if (cards) {
+          cards.innerHTML = TEACHER_REQUESTS.map(function (r) {
+            const c = chipMap[r.status];
+            return `<div class="card">
+              <div class="row row--between row--wrap" style="gap:10px">
+                <div>
+                  <h4 style="margin:0">${r.from}</h4>
+                  <p class="small muted" style="margin:2px 0 0">${Manhal.tr(Manhal.SUBJ(r.subject))} · ${Manhal.tr(Manhal.GRADE(r.grade))} · ${Manhal.tr(Manhal.DIST(r.district))} · ${Manhal.t(MODE_LABEL(r.mode))}</p>
+                </div>
+                <span class="chip ${c[0]}">${c[1]}</span>
+              </div>
+              <div class="row mt-md" style="gap:8px">
+                <button class="btn btn--sm" type="button" onclick="Manhal.toast('تم قبول الطلب وإتاحة التواصل', 'success')" ${r.status !== "pending" ? "disabled" : ""}>${Manhal.t("common.confirm")}</button>
+                <button class="btn btn--ghost btn--sm" type="button" ${r.status !== "pending" ? "disabled" : ""}>${Manhal.t("common.cancel")}</button>
+              </div>
+            </div>`;
+          }).join("");
+        }
+        const u1 = document.getElementById("urgent-list");
+        if (u1) u1.innerHTML = URGENT.map(urgentCard).join("");
+        const u2 = document.getElementById("urgent-full");
+        if (u2) u2.innerHTML = URGENT.concat(URGENT.map(function (u) { return Object.assign({}, u, { school: "مدرسة النور الخاصة" }); })).map(urgentCard).join("");
+
+        const av = document.getElementById("avail-grid");
+        if (av) {
+          const days = [["السبت", true], ["الأحد", true], ["الإثنين", true], ["الثلاثاء", true], ["الأربعاء", true], ["الخميس", false], ["الجمعة", false]];
+          av.innerHTML = days.map(function (d) {
+            return `<div class="row row--between" style="padding:10px 0;border-bottom:1px solid var(--border)">
+              <strong class="small">${d[0]}</strong>
+              <div class="row" style="gap:8px">
+                <label class="checkbox"><input type="checkbox" ${d[1] ? "checked" : ""}/><span class="small">${Manhal.t("common.teacher")}</span></label>
+                <label class="checkbox"><input type="checkbox" ${d[1] ? "checked" : ""}/><span class="small">${Manhal.t("common.parent")}</span></label>
+              </div>
+            </div>`;
+          }).join("");
+        }
+      }
+      document.querySelectorAll("[data-section]").forEach(function (l) {
+        l.addEventListener("click", function () { setTimeout(render, 0); });
+      });
+      document.querySelectorAll("[data-set-lang]").forEach(function (b) {
+        b.addEventListener("click", function () {
+          localStorage.setItem("manhal.lang", b.getAttribute("data-set-lang"));
+          location.reload();
+        });
+      });
+      render();
+      document.addEventListener("manhal:re-render", render);
+      document.addEventListener("manhal:lang", render);
+    })();
+  </script>
+</body>
+</html>

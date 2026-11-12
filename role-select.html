@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>اختيار نوع الحساب — منهل</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <style>
+    #role-app .role-card .chip { display: none; }
+    #role-app .role-card { cursor: pointer; }
+  </style>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main id="main" class="section">
+    <div class="container" id="role-app" style="max-width:1040px">
+      <div class="section-head center" style="margin-inline:auto">
+        <span class="hero__eyebrow" data-i18n="nav.start">ابدأ الآن</span>
+        <h1 data-i18n="role.title">كيف تريد استخدام المنصة؟</h1>
+        <p data-i18n="role.sub">اختر الدور الذي يصفك، وسنجهّز لك التجربة المناسبة.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <article class="role-card" data-role="school" tabindex="0" role="button" aria-pressed="false">
+          <div class="role-card__icon">
+            <svg class="icon" viewBox="0 0 24 24"><path d="m4 6 8-4 8 4"/><path d="M18 10v11H6V10"/><path d="M2 21h20"/><path d="M12 10v4"/></svg>
+          </div>
+          <h2 class="role-card__title" data-i18n="roles.school.title">أنا مدرسة</h2>
+          <p class="role-card__desc" data-i18n="roles.school.desc">ابحث عن معلمين، انشر وظيفة، أو اطلب معلمًا بشكل عاجل عند الحاجة.</p>
+          <span class="chip chip--lavender mt-sm" data-i18n="role.selected">محدد</span>
+        </article>
+
+        <article class="role-card" data-role="parent" tabindex="0" role="button" aria-pressed="false">
+          <div class="role-card__icon">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <h2 class="role-card__title" data-i18n="roles.parent.title">أنا ولي أمر</h2>
+          <p class="role-card__desc" data-i18n="roles.parent.desc">اعثر على مدرس خصوصي مناسب لابنك حسب المادة والصف والوقت.</p>
+          <span class="chip chip--lavender mt-sm" data-i18n="role.selected">محدد</span>
+        </article>
+
+        <article class="role-card" data-role="teacher" tabindex="0" role="button" aria-pressed="false">
+          <div class="role-card__icon">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/></svg>
+          </div>
+          <h2 class="role-card__title" data-i18n="roles.teacher.title">أنا معلم</h2>
+          <p class="role-card__desc" data-i18n="roles.teacher.desc">أنشئ ملفك المهني، حدّد أوقات توفرك، واستقبل الفرص المناسبة.</p>
+          <span class="chip chip--lavender mt-sm" data-i18n="role.selected">محدد</span>
+        </article>
+      </div>
+
+      <div class="alert alert--info mt-lg">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 16v-5M12 8h.01"/></svg>
+        <span data-i18n="role.note">يمكنك البحث عن المعلمين دون حساب؛ الحساب مطلوب فقط لحفظ الملفات أو إرسال طلبات التواصل.</span>
+      </div>
+
+      <div class="row row--between row--wrap mt-xl">
+        <div class="row small muted" style="gap:6px">
+          <span data-i18n="auth.haveAccount">لديك حساب بالفعل؟</span>
+          <a href="login.html" data-i18n="nav.login">تسجيل الدخول</a>
+        </div>
+        <a class="btn btn--lg hidden" id="role-next" href="signup.html">
+          <span data-i18n="common.next">التالي</span>
+          <svg class="icon" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script>
+    /* hide the "selected" chip until the card is actually selected */
+    document.querySelectorAll("#role-app .role-card").forEach(function (c) {
+      c.addEventListener("click", function () {
+        c.setAttribute("aria-pressed", "true");
+        document.querySelectorAll("#role-app .role-card .chip").forEach(function (ch) {
+          ch.style.display = "none";
+        });
+        c.querySelector(".chip").style.display = "";
+      });
+      c.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); c.click(); }
+      });
+    });
+  </script>
+</body>
+</html>

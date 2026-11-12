@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>البحث عن معلم — منهل</title>
+  <meta name="description" content="ابحث عن معلم مناسب حسب المادة والصف والمنطقة ونمط التدريس — نتائج مرتبة حسب المطابقة." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main id="main" class="section section--tight">
+    <div class="container" id="search-app">
+      <div class="section-head" style="margin-bottom:24px">
+        <h1 style="font-size:clamp(24px,3vw,34px)" data-i18n="search.title">ابحث عن معلم</h1>
+        <p data-i18n="search.sub">حدد المادة والصف والمنطقة ونمط التدريس، وسنرتب لك النتائج حسب المطابقة.</p>
+      </div>
+
+      <div class="searchbar" style="margin-bottom:28px">
+        <div class="searchbar__grid" style="grid-template-columns:repeat(4,minmax(0,1fr))">
+          <div class="field">
+            <label class="field__label" for="f-subject" data-i18n="search.subject">المادة</label>
+            <select class="select" id="f-subject"></select>
+          </div>
+          <div class="field">
+            <label class="field__label" for="f-grade" data-i18n="search.grade">الصف</label>
+            <select class="select" id="f-grade"></select>
+          </div>
+          <div class="field">
+            <label class="field__label" for="f-district" data-i18n="search.district">المنطقة</label>
+            <select class="select" id="f-district"></select>
+          </div>
+          <div class="field">
+            <label class="field__label" for="f-mode" data-i18n="search.mode">نمط التدريس</label>
+            <select class="select" id="f-mode"></select>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid search-layout" style="align-items:start">
+        <aside class="card filters" style="padding:18px">
+          <div class="row row--between" style="margin-bottom:8px">
+            <strong class="small" data-i18n="search.filters">تصفية النتائج</strong>
+            <span class="chip chip--lavender" id="results-count">—</span>
+          </div>
+          <div class="filters__group">
+            <div class="input-icon">
+              <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+              <input class="input" id="f-q" type="search" data-i18n-placeholder="common.search" placeholder="بحث" />
+            </div>
+          </div>
+          <div class="filters__group">
+            <div class="filters__title" data-i18n="common.availability">التوفر</div>
+            <label class="checkbox"><input type="checkbox" id="f-available" /><span data-i18n="search.availableOnly">المتاحون الآن فقط</span></label>
+            <label class="checkbox" style="margin-top:8px"><input type="checkbox" id="f-verified" /><span data-i18n="search.verifiedOnly">الموثّقون فقط</span></label>
+          </div>
+          <div class="filters__group">
+            <div class="filters__title" data-i18n="common.sort">الترتيب</div>
+            <select class="select" id="f-sort" style="min-height:44px">
+              <option value="match" data-i18n="sort.match">الأكثر تطابقًا</option>
+              <option value="rating" data-i18n="sort.rating">الأعلى تقييمًا</option>
+              <option value="experience" data-i18n="sort.experience">الأكثر خبرة</option>
+              <option value="near" data-i18n="sort.near">الأقرب</option>
+            </select>
+          </div>
+          <div class="filters__group">
+            <button class="btn btn--secondary btn--block btn--sm" type="button" id="btn-notify" data-i18n="search.notify">نبّهني عند ظهور معلم</button>
+          </div>
+        </aside>
+
+        <div>
+          <div class="row row--between" style="margin-bottom:14px">
+            <h2 style="font-size:17px;margin:0" data-i18n="search.heading">المعلمون المتاحون</h2>
+            <span class="chip" data-i18n="common.demoNotice">هذه بيانات تجريبية للعرض فقط.</span>
+          </div>
+          <div class="stack" id="results" style="gap:14px"></div>
+          <div id="results-empty" class="hidden">
+            <div class="empty">
+              <div class="empty__icon">
+                <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+              </div>
+              <h3 data-i18n="search.noResults">لا توجد نتائج مطابقة</h3>
+              <p data-i18n="search.noResultsDesc">جرّب توسيع نطاق البحث، أو انشر طلبك وسنُنبّهك عند ظهور معلم مطابق.</p>
+              <div class="row row--wrap" style="justify-content:center;gap:8px">
+                <a class="btn" href="urgent.html" data-i18n="search.postRequest">انشر طلبك</a>
+                <button class="btn btn--ghost" type="button" id="btn-notify-2" data-i18n="search.notify">نبّهني عند ظهور معلم</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script>
+    (function () {
+      const params = new URLSearchParams(location.search);
+      function fillSelects() {
+        const lang = document.documentElement.lang === "en" ? "en" : "ar";
+        const map = [
+          ["f-subject", "search.any", SUBJECTS],
+          ["f-grade", "search.anyGrade", GRADES],
+          ["f-district", "search.anyDistrict", DISTRICTS]
+        ];
+        map.forEach(function (m) {
+          const el = document.getElementById(m[0]);
+          if (!el) return;
+          const cur = el.value || params.get(m[0].replace("f-", "")) || "";
+          el.innerHTML =
+            '<option value="">' + Manhal.t(m[1]) + "</option>" +
+            m[2].map((x) => `<option value="${x.id}">${x[lang]}</option>`).join("");
+          el.value = cur;
+        });
+        const modeEl = document.getElementById("f-mode");
+        if (modeEl) {
+          const cur = modeEl.value || params.get("mode") || "";
+          modeEl.innerHTML =
+            '<option value="">' + Manhal.t("common.all") + "</option>" +
+            MODES.map((x) => `<option value="${x.id}">${Manhal.t(x.key)}</option>`).join("");
+          modeEl.value = cur;
+        }
+      }
+      fillSelects();
+      document.addEventListener("manhal:lang", fillSelects);
+      const n2 = document.getElementById("btn-notify-2");
+      if (n2) n2.addEventListener("click", function () { Manhal.toast(Manhal.t("search.saved"), "success"); });
+    })();
+  </script>
+</body>
+</html>

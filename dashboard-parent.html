@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>لوحة ولي الأمر — منهل</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <div class="dash" id="dash-app" data-role="parent">
+    <aside class="dash__side">
+      <div class="dash__profile">
+        <div class="avatar">أ</div>
+        <div>
+          <strong data-dash-name>أحمد باشراحيل</strong>
+          <span data-dash-role>ولي أمر</span>
+        </div>
+      </div>
+      <nav class="dash__nav">
+        <a class="dash__link is-active" href="#" data-section="overview">
+          <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          <span data-i18n="dash.overview">لوحة التحكم</span>
+        </a>
+        <a class="dash__link" href="search.html">
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          <span data-i18n="dash.search">البحث عن معلم</span>
+        </a>
+        <a class="dash__link" href="#" data-section="saved">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M20.8 5.6a5.5 5.5 0 0 0-7.8 0L12 6.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg>
+          <span data-i18n="dash.saved">المحفوظون</span>
+        </a>
+        <a class="dash__link" href="#" data-section="requests">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <span data-i18n="dash.contactRequests">طلبات التواصل</span>
+        </a>
+        <a class="dash__link" href="#" data-section="notifications">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+          <span data-i18n="dash.notifications">الإشعارات</span>
+        </a>
+        <a class="dash__link" href="#" data-section="settings">
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
+          <span data-i18n="dash.settings">الإعدادات</span>
+        </a>
+      </nav>
+    </aside>
+
+    <div class="dash__main">
+      <section data-panel="overview">
+        <h1 style="font-size:24px;margin:0"><span data-i18n="dash.welcome">أهلًا بك</span>، <span data-dash-name>أحمد باشراحيل</span> 👋</h1>
+        <p class="small muted" data-i18n="roles.parent.desc">اعثر على مدرس خصوصي مناسب لابنك حسب المادة والصف والوقت.</p>
+
+        <div class="grid grid-3 mt-lg" style="gap:14px">
+          <a class="action-tile" href="search.html">
+            <div class="action-tile__icon"><svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div>
+            <strong data-i18n="roles.parent.cta">ابحث عن مدرس</strong>
+            <small data-i18n="search.sub">حدد المادة والصف والمنطقة ونمط التدريس، وسنرتب لك النتائج حسب المطابقة.</small>
+          </a>
+          <a class="action-tile" href="urgent.html">
+            <div class="action-tile__icon"><svg class="icon" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+            <strong data-i18n="search.postRequest">انشر طلبك</strong>
+            <small data-i18n="search.noResultsDesc">جرّب توسيع نطاق البحث، أو انشر طلبك وسنُنبّهك عند ظهور معلم مطابق.</small>
+          </a>
+          <a class="action-tile" href="#" data-section="saved">
+            <div class="action-tile__icon"><svg class="icon" viewBox="0 0 24 24"><path d="M20.8 5.6a5.5 5.5 0 0 0-7.8 0L12 6.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></div>
+            <strong data-i18n="dash.saved">المحفوظون</strong>
+            <small data-i18n="teachers.b3">طلبات تواصل منظمة دون إزعاج</small>
+          </a>
+        </div>
+
+        <div class="grid grid-3 mt-lg" style="gap:14px">
+          <div class="kpi"><div class="kpi__value">2</div><div class="kpi__label" data-i18n="dash.contactRequests">طلبات التواصل</div></div>
+          <div class="kpi"><div class="kpi__value" id="saved-count">0</div><div class="kpi__label" data-i18n="dash.saved">المحفوظون</div></div>
+          <div class="kpi"><div class="kpi__value">1</div><div class="kpi__label" data-i18n="search.saved">تنبيه محفوظ</div></div>
+        </div>
+
+        <h2 class="mt-lg" style="font-size:16px" data-i18n="dash.suggested">معلمون مقترحون</h2>
+        <div class="grid grid-2 mt-sm" id="suggested-list" style="gap:14px"></div>
+      </section>
+
+      <section data-panel="requests" class="hidden">
+        <h1 style="font-size:22px" data-i18n="dash.contactRequests">طلبات التواصل</h1>
+        <div class="card" style="padding:0;overflow:hidden">
+          <div class="table-wrap" style="border:0;border-radius:0">
+            <table class="table">
+              <thead><tr><th data-i18n="common.teacher">معلم</th><th data-i18n="common.subject">المادة</th><th data-i18n="common.status">الحالة</th><th data-i18n="common.date">التاريخ</th></tr></thead>
+              <tbody id="parent-requests"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section data-panel="saved" class="hidden">
+        <h1 style="font-size:22px" data-i18n="dash.saved">المحفوظون</h1>
+        <div class="stack" id="saved-list" style="gap:14px"></div>
+      </section>
+
+      <section data-panel="notifications" class="hidden">
+        <h1 style="font-size:22px" data-i18n="dash.notifications">الإشعارات</h1>
+        <div class="stack" id="notif-list" style="gap:10px"></div>
+      </section>
+
+      <section data-panel="settings" class="hidden">
+        <h1 style="font-size:22px" data-i18n="dash.settings">الإعدادات</h1>
+        <div class="card">
+          <h3 style="font-size:15px" data-i18n="common.language">اللغة</h3>
+          <div class="row" style="gap:8px">
+            <button class="btn btn--ghost btn--sm" type="button" data-set-lang="ar">العربية</button>
+            <button class="btn btn--ghost btn--sm" type="button" data-set-lang="en">English</button>
+          </div>
+          <hr class="divider" />
+          <label class="checkbox"><input type="checkbox" checked /><span>إشعارات داخل المنصة</span></label>
+          <label class="checkbox mt-sm"><input type="checkbox" checked /><span>إشعارات البريد الإلكتروني</span></label>
+          <label class="checkbox mt-sm"><input type="checkbox" /><span>إشعارات الجوال</span></label>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script>
+    (function () {
+      function render() {
+        const sug = document.getElementById("suggested-list");
+        if (sug) sug.innerHTML = TEACHERS.slice(2, 4).map((x) => Manhal.teacherCard(x, { showMatch: true })).join("");
+
+        const req = document.getElementById("parent-requests");
+        if (req) {
+          req.innerHTML = [
+            { name: "أ. سارة بامطرف", subject: "math", status: "accepted", date: "2026-11-07", chip: "chip--verified", label: "مقبول" },
+            { name: "أ. نورة العولقي", subject: "english", status: "pending", date: "2026-11-09", chip: "chip--urgent", label: "بانتظار الرد" }
+          ].map(function (r) {
+            return `<tr><td>${r.name}</td><td>${Manhal.tr(Manhal.SUBJ(r.subject))}</td><td><span class="chip ${r.chip}">${r.label}</span></td><td>${r.date}</td></tr>`;
+          }).join("");
+        }
+
+        const saved = document.getElementById("saved-list");
+        const cnt = document.getElementById("saved-count");
+        const ids = Manhal.getSaved();
+        if (cnt) cnt.textContent = ids.length;
+        if (saved) {
+          saved.innerHTML = ids.length
+            ? ids.map((id) => TEACHERS.find((x) => x.id === id)).filter(Boolean).map((x) => Manhal.teacherCard(x)).join("")
+            : Manhal.emptyState("heart", Manhal.t("common.empty"), Manhal.t("search.noResultsDesc"), `<a class="btn" href="search.html">${Manhal.t("common.searchTeacher")}</a>`);
+        }
+      }
+      document.querySelectorAll("[data-section]").forEach(function (l) {
+        l.addEventListener("click", function () { setTimeout(render, 0); });
+      });
+      document.querySelectorAll("[data-set-lang]").forEach(function (b) {
+        b.addEventListener("click", function () {
+          localStorage.setItem("manhal.lang", b.getAttribute("data-set-lang"));
+          location.reload();
+        });
+      });
+      render();
+      document.addEventListener("manhal:re-render", render);
+      document.addEventListener("manhal:lang", render);
+    })();
+  </script>
+</body>
+</html>
